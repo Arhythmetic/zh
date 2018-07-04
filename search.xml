@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[你好，世界]]></title>
+    <url>%2Fzh%2Fposts%2FHello-World%2F</url>
+    <content type="text"><![CDATA[--- title: 你好，世界 date: 2018-03-20 tags: 其他 --- # 你好，世界 终于搭建好属于自己的博客啦！ 主要分享技术和思想，偶尔聊聊其他。😂 栏目简介： - 点子： 灵感分享 - 书籍： 书籍推荐 - 课程： 课程搜罗 ``` Java // Java class HelloWorld { public static void main() { System.out.println("Hello World!"); } } ``` ``` C++ // C++ #include "iostream" int main() { std::cout < "Hello World!" < std::endl; return 0; } ``` ``` C // C #include "stdio.h" int main() { printf("Hello World!\n"); return 0; } ``` ``` Python # Python print("Hello World!") ``` ``` JavaScript // JavaScript Console.log("Hello World!"); ```]]></content>
+      <tags>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于]]></title>
+    <url>%2Fzh%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 关于 date: false --- 热爱计算机 热爱互联网 热爱人工智能 极客 完美主义者 兴趣和好奇心驱动 保持饥饿，保持愚蠢。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[书籍]]></title>
+    <url>%2Fzh%2Fbooks%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 书籍 date: false comments: false ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[分类]]></title>
+    <url>%2Fzh%2Fcategories%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 分类 type: "categories" date: false comments: false ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[课程]]></title>
+    <url>%2Fzh%2Fcourses%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 课程 date: false comments: false ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[点子]]></title>
+    <url>%2Fzh%2Fideas%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 点子 date: false comments: false ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[标签]]></title>
+    <url>%2Fzh%2Ftags%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 标签 type: "tags" date: false comments: false ---]]></content>
+  </entry>
+</search>
