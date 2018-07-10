@@ -19,14 +19,14 @@
     <content type="text"><![CDATA[--- title: 分类 type: "categories" date: false comments: false ---]]></content>
   </entry>
   <entry>
-    <title><![CDATA[课程]]></title>
-    <url>%2Fzh%2Fcourses%2Findex.html</url>
-    <content type="text"><![CDATA[--- title: 课程 date: false comments: false ---]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[书籍]]></title>
     <url>%2Fzh%2Fbooks%2Findex.html</url>
     <content type="text"><![CDATA[--- title: 书籍 date: false comments: false ---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[课程]]></title>
+    <url>%2Fzh%2Fcourses%2Findex.html</url>
+    <content type="text"><![CDATA[--- title: 课程 date: false comments: false ---]]></content>
   </entry>
   <entry>
     <title><![CDATA[点子]]></title>
