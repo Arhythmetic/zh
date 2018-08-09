@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://devtunes.github.io/zh/posts/Project-Algorithms/</loc>
+    
+    <lastmod>2018-08-09T15:42:32.617Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://devtunes.github.io/zh/posts/Hello-World/</loc>
     
     <lastmod>2018-07-04T16:49:02.065Z</lastmod>
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://devtunes.github.io/zh/categories/index.html</loc>
+    <loc>https://devtunes.github.io/zh/books/index.html</loc>
     
     <lastmod>2018-07-04T16:49:02.065Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://devtunes.github.io/zh/books/index.html</loc>
+    <loc>https://devtunes.github.io/zh/categories/index.html</loc>
     
     <lastmod>2018-07-04T16:49:02.065Z</lastmod>
     

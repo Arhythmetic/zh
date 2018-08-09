@@ -112,24 +112,25 @@
 
 
 
-  <meta name="description" content="保持饥饿，保持愚蠢。">
-<meta name="keywords" content="技术, 工程, 计算机科学, 算法, 机器学习, 互联网后台">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习与探索笔记">
-<meta property="og:url" content="https://devtunes.github.io/zh/archives/2018/03/index.html">
+  <meta name="description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
+<meta name="keywords" content="算法,项目,目录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现一个算法与数据结构库（一）">
+<meta property="og:url" content="https://devtunes.github.io/zh/posts/Project-Algorithms/index.html">
 <meta property="og:site_name" content="学习与探索笔记">
-<meta property="og:description" content="保持饥饿，保持愚蠢。">
+<meta property="og:description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-08-09T15:42:32.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习与探索笔记">
-<meta name="twitter:description" content="保持饥饿，保持愚蠢。">
+<meta name="twitter:title" content="实现一个算法与数据结构库（一）">
+<meta name="twitter:description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
 
 
 
 
 
 
-  <link rel="canonical" href="https://devtunes.github.io/zh/archives/2018/03/"/>
+  <link rel="canonical" href="https://devtunes.github.io/zh/posts/Project-Algorithms/"/>
 
 
 
@@ -139,7 +140,7 @@
   };
 </script>
 
-  <title>归档 | 学习与探索笔记</title>
+  <title>实现一个算法与数据结构库（一） | 学习与探索笔记</title>
   
 
 
@@ -186,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -267,7 +268,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/zh/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -347,115 +348,217 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 2 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
-
-        
+  
+    <div class="reading-progress-bar"></div>
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://devtunes.github.io/zh/zh/posts/Project-Algorithms/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="回锅肉">
+      <meta itemprop="description" content="保持饥饿，保持愚蠢。">
+      <meta itemprop="image" content="/zh/images/avatar-sf.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习与探索笔记">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/zh/posts/Hello-World/" itemprop="url">
-              
-                <span itemprop="name">你好，世界</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">实现一个算法与数据结构库（一）
+              
+            
+          </h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-20T00:00:00+08:00"
-              content="2018-03-20" >
-          03-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-08-09 21:56:32 / 修改时间：23:42:32" itemprop="dateCreated datePublished" datetime="2018-08-09T21:56:32+08:00">2018-08-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><ul>
+<li>动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。</li>
+<li>动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。</li>
+<li><p>动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。</p>
+<p>基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。</p>
+</li>
+</ul>
+<a id="more"></a>
+<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。先以 Java 进行实现，后期再考虑其他语言的实现。</p>
+<p>详细计划待进一步更新。。。</p>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>待更新。。。</p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>待更新。。。</p>
+<blockquote>
+<p>博客搭好这么久却一直没时间更新，今天先挖坑，就当是对自己的督促吧。</p>
+</blockquote>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>回锅肉</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://devtunes.github.io/zh/posts/Project-Algorithms/" title="实现一个算法与数据结构库（一）">https://devtunes.github.io/zh/posts/Project-Algorithms/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/zh/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/zh/tags/项目/" rel="tag"># 项目</a>
+          
+            <a href="/zh/tags/目录/" rel="tag"># 目录</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/zh/posts/Hello-World/" rel="next" title="你好，世界">
+                <i class="fa fa-chevron-left"></i> 你好，世界
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -476,8 +579,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -564,6 +676,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动机"><span class="nav-number">1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计划"><span class="nav-number">2.</span> <span class="nav-text">计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标"><span class="nav-number">3.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">4.</span> <span class="nav-text">目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -738,6 +866,10 @@
 
 
   
+  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -750,6 +882,37 @@
 
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://devtunes.github.io/zh/posts/Project-Algorithms/';
+        this.page.identifier = 'posts/Project-Algorithms/';
+        this.page.title = '实现一个算法与数据结构库（一）';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://devtunes-zh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
   
 
 
@@ -1142,7 +1305,7 @@
   <script src="/zh/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
