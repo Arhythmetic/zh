@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
+  <meta name="description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 <meta name="keywords" content="算法,项目,目录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现一个算法与数据结构库（一）">
 <meta property="og:url" content="https://devtunes.github.io/zh/posts/Project-Algorithms/index.html">
 <meta property="og:site_name" content="学习与探索笔记">
-<meta property="og:description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
+<meta property="og:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-08-17T15:53:49.883Z">
+<meta property="og:updated_time" content="2018-08-17T16:47:28.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现一个算法与数据结构库（一）">
-<meta name="twitter:description" content="动机 动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。 动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。 动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于">
+<meta name="twitter:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。 基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 
 
 
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-17 23:53:49" itemprop="dateModified" datetime="2018-08-17T23:53:49+08:00">2018-08-17</time>
+                <time title="修改时间：2018-08-18 00:47:28" itemprop="dateModified" datetime="2018-08-18T00:47:28+08:00">2018-08-18</time>
               
             
           </span>
@@ -463,17 +463,41 @@
 
       
         <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><ul>
-<li>动机一：在学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后感到意犹未尽，想要更加深入算法的世界。</li>
-<li>动机二：在看了 Java 的 Collections 框架的部分源代码后，开始思考，能不能在此基础上做的更好。</li>
-<li><p>动机三：前段时间突发奇想，产生了一种降低代码耦合度，提升灵活性和复用程度的设计思路，于是想要验证这种思路。</p>
+<li>动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。</li>
+<li>动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。</li>
+<li><p>动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。</p>
 <p>基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。</p>
 </li>
 </ul>
 <a id="more"></a>
-<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。先以 Java 进行实现，后期再考虑其他语言的实现。</p>
-<p>详细计划待进一步更新。。。</p>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>待更新。。。</p>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>待更新。。。</p>
+<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。优先以 Java 语言进行实现，待 Java 版稳定后再以 C++ 实现。</p>
+<ol>
+<li><p>以《算法，第四版》和 Collections 框架为基础；</p>
+</li>
+<li><p>在实现上尽量保证效率（时间和空间复杂度）和正确性，同时追求代码可读性，一致性，可维护性和高复用度；</p>
+</li>
+<li><p>充分利用语言特性，保证类型安全，异常安全等。</p>
+</li>
+</ol>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><p>容器/Container</p>
+<p>底层实现方式：</p>
+<ul>
+<li>数组容器/ArrayContainer</li>
+<li>链式容器/LinkedContainer</li>
+<li>树型容器/TreeContainer</li>
+</ul>
+<p>数据结构类型：</p>
+<ul>
+<li>背包/Bag</li>
+<li>栈/Stack</li>
+<li>队列/Queue</li>
+<li>优先队列/PriorityQueue</li>
+<li>字典/Map</li>
+<li>集合/Set</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>博客搭好这么久却一直没时间更新，今天先挖坑，就当是对自己的督促吧。</p>
 </blockquote>
@@ -698,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动机"><span class="nav-number">1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计划"><span class="nav-number">2.</span> <span class="nav-text">计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标"><span class="nav-number">3.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">4.</span> <span class="nav-text">目录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动机"><span class="nav-number">1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计划"><span class="nav-number">2.</span> <span class="nav-text">计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li></ol></div>
             
 
           </div>
