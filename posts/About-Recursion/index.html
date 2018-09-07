@@ -116,24 +116,28 @@
 
 
 
-  <meta name="description" content="保持饥饿，保持愚蠢。">
-<meta name="keywords" content="技术, 工程, 计算机科学, 算法, 机器学习, 互联网后台">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习与探索笔记">
-<meta property="og:url" content="https://devtunes.github.io/zh/archives/2018/index.html">
+  <meta name="description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta name="keywords" content="递归,编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈递归">
+<meta property="og:url" content="https://devtunes.github.io/zh/posts/About-Recursion/index.html">
 <meta property="og:site_name" content="学习与探索笔记">
-<meta property="og:description" content="保持饥饿，保持愚蠢。">
+<meta property="og:description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="https://devtunes.github.io/zh/posts/About-Recursion/Recursion-Google.png">
+<meta property="og:image" content="https://devtunes.github.io/zh/posts/About-Recursion/Recursion-Process.svg">
+<meta property="og:updated_time" content="2018-09-02T15:37:29.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习与探索笔记">
-<meta name="twitter:description" content="保持饥饿，保持愚蠢。">
+<meta name="twitter:title" content="浅谈递归">
+<meta name="twitter:description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta name="twitter:image" content="https://devtunes.github.io/zh/posts/About-Recursion/Recursion-Google.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://devtunes.github.io/zh/archives/2018/"/>
+  <link rel="canonical" href="https://devtunes.github.io/zh/posts/About-Recursion/"/>
 
 
 
@@ -143,7 +147,7 @@
   };
 </script>
 
-  <title>归档 | 学习与探索笔记</title>
+  <title>浅谈递归 | 学习与探索笔记</title>
   
 
 
@@ -190,7 +194,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,7 +275,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/zh/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -351,189 +355,250 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://devtunes.github.io/zh/zh/posts/About-Recursion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="回锅肉">
+      <meta itemprop="description" content="保持饥饿，保持愚蠢。">
+      <meta itemprop="image" content="/zh/images/avatar-sf.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习与探索笔记">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">浅谈递归<a href="https://github.com/Devtunes/Blogs/blob/master/zh/source/_posts/About-Recursion.md" class="post-edit-link" title="编辑" target="_blank">
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                
+              
+            
+          </h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-29 21:41:14" itemprop="dateCreated datePublished" datetime="2018-08-29T21:41:14+08:00">2018-08-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-02 23:37:29" itemprop="dateModified" datetime="2018-09-02T23:37:29+08:00">2018-09-02</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/zh/posts/About-Recursion/" itemprop="url">
-              
-                <span itemprop="name">浅谈递归</span>
-              
-            </a>
-        
-      </h3>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-29T21:41:14+08:00"
-              content="2018-08-29" >
-          08-29
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/zh/posts/Project-Algorithms-I/" itemprop="url">
-              
-                <span itemprop="name">实现一个算法与数据结构库（一）</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-09T21:56:32+08:00"
-              content="2018-08-09" >
-          08-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/zh/posts/Hello-World/" itemprop="url">
-              
-                <span itemprop="name">你好，世界</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-20T00:00:00+08:00"
-              content="2018-03-20" >
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="浅谈递归"><a href="#浅谈递归" class="headerlink" title="浅谈递归"></a>浅谈递归</h1><p>递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
+<p>用一张图来说明：</p>
+<img src="/zh/posts/About-Recursion/Recursion-Google.png" title="不过这个递归好像会导致 StackOverflow 😂">
+<a id="more"></a>
+<h2 id="从与循环的关系看递归"><a href="#从与循环的关系看递归" class="headerlink" title="从与循环的关系看递归"></a>从与循环的关系看递归</h2><p>从这个角度看，递归可以分为两种。</p>
+<ol>
+<li><strong>可以直接改写成循环的</strong></li>
+<li><strong>改写成循环的时候需要用到栈的</strong></li>
+</ol>
+<p>第一种情况的例子有用于求最大公约数的辗转相除算法，还有求斐波那契数列第 n 项的算法，二分查找等：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number == <span class="number">0</span> || number == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> number;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(number - <span class="number">1</span>) + fibonacci(number - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> fa = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> fb = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> fc = fa + fb;</span><br><span class="line">            fa = fb;</span><br><span class="line">            fb = fc;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fa;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过上面的代码可以看到，这一类的递归和循环之间存在着比较直接的对应关系，改写成循环不需要借助任何辅助数据结构，并且改写成循环之后还有可能降低开销甚至时间复杂度。例如：求斐波那契数列第 n 项的算法的递归形式的时间复杂的是惊人的 $O(2^n)$，而对应的循环形式的时间复杂度是 $O(n)$。</p>
+<p>第二种情况的例子有二叉树的遍历等：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里以二叉树的中序遍历为例</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 二叉树节点</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">    Item item;</span><br><span class="line">    Node&lt;Item&gt; left;</span><br><span class="line">    Node&lt;Item&gt; right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树中序遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        traverse(root.left);</span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">        traverse(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中序遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Node&lt;Item&gt;&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        Node&lt;Item&gt; node = root;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span> || !stack.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.left();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            node = stack.pop();</span><br><span class="line">            System.out.println(node.item);</span><br><span class="line">            node = node.right();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过上面的代码可以看到，这一类递归若要改写成循环需要借助栈的帮助，就此例而言时间复杂度没有变化，都为 $O(n)$。</p>
+<h2 id="如何区分这两种递归"><a href="#如何区分这两种递归" class="headerlink" title="如何区分这两种递归"></a>如何区分这两种递归</h2><h3 id="尾递归"><a href="#尾递归" class="headerlink" title="尾递归"></a>尾递归</h3><p>在具体讨论如何区分这两种递归之前，我们先来了解一个已有的定义：<em>尾递归</em></p>
+<p>在具体讨论尾递归之前，我们先来了解一下另一个已有的定义：<em>尾调用</em></p>
+<p>尾调用是指：一个函数里的最后一个动作是返回一个函数调用的情形。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 f 中最后一个动作是返回对函数 g 的调用，这就称之为尾调用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> g();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 h 最后一个动作不是返回对函数 g 的调用，而是返回对函数 g 的调用结果再加 1，这就不是尾调用了</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">h</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> g() + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 i 可以改写成函数 f，但函数 i 不能算是严格意义上的尾调用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">i</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">int</span> g = g();</span><br><span class="line">    <span class="keyword">return</span> g;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而尾递归就是尾调用的的特例，尾递归函数中最后一个动作是返回对该函数自身的调用。上文中，辗转相除算法的递归形式就是尾递归的例子。而尾递归属于第一类递归，即可以直接改写为循环，不需要栈的辅助。而很多现代的编译期甚至会直接对尾递归进行优化，消除调用过程中的栈帧，这样就再也不会 StackOverflow 啦。</p>
+<h3 id="递归函数的执行过程"><a href="#递归函数的执行过程" class="headerlink" title="递归函数的执行过程"></a>递归函数的执行过程</h3><p>为了了解为什么递归会分成这两种以及为什么尾递归属于第一类递归，我们先来分析递归函数的执行过程。</p>
+<p>对于任何递归函数，其执行流程都可以看成两部分：</p>
+<ul>
+<li><p>向下调用</p>
+<p>向下调用是指：从递归函数执行开始，其不断向下调用自身，直到遇到第一个返回语句的整个过程。</p>
+</li>
+<li><p>向上返回</p>
+<p>向上返回是指：从遇到的第一个返回语句开始，其不断的向上返回，直到返回到最顶层，或在返回途中再次遇到对自身的调用的整个过程。</p>
+</li>
+</ul>
+<p>以辗转相除算法的递归函数为例，其执行过程如下图所示：</p>
+<img src="/zh/posts/About-Recursion/Recursion-Process.svg" title="辗转相除算法的递归函数执行流程图示">
+<blockquote>
+<p>剩下的明天再更，睡觉去了。。。😂</p>
+</blockquote>
 
       
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>回锅肉</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://devtunes.github.io/zh/posts/About-Recursion/" title="浅谈递归">https://devtunes.github.io/zh/posts/About-Recursion/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/zh/tags/递归/" rel="tag"># 递归</a>
+          
+            <a href="/zh/tags/编程/" rel="tag"># 编程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/zh/posts/Project-Algorithms-I/" rel="next" title="实现一个算法与数据结构库（一）">
+                <i class="fa fa-chevron-left"></i> 实现一个算法与数据结构库（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -554,8 +619,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -652,6 +726,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅谈递归"><span class="nav-number">1.</span> <span class="nav-text">浅谈递归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从与循环的关系看递归"><span class="nav-number">1.1.</span> <span class="nav-text">从与循环的关系看递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何区分这两种递归"><span class="nav-number">1.2.</span> <span class="nav-text">如何区分这两种递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尾递归"><span class="nav-number">1.2.1.</span> <span class="nav-text">尾递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归函数的执行过程"><span class="nav-number">1.2.2.</span> <span class="nav-text">递归函数的执行过程</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -828,6 +918,10 @@
 
 
   
+  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
@@ -840,6 +934,37 @@
 
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://devtunes.github.io/zh/posts/About-Recursion/';
+        this.page.identifier = 'posts/About-Recursion/';
+        this.page.title = '浅谈递归';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://devtunes-zh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
   
 
 
@@ -1207,6 +1332,30 @@
   
 
   
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
 
 
   
@@ -1232,7 +1381,7 @@
   <script src="/zh/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 

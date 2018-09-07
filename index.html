@@ -29,6 +29,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" media="all" href="/zh/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -62,19 +66,19 @@
 
 <link href="/zh/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/zh/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+<link href="/zh/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.1">
 
 
-  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.0" color="#E91E63">
+  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.1" color="#E91E63">
 
 
 
@@ -89,13 +93,13 @@
   var CONFIG = {
     root: '/zh/',
     scheme: 'Gemini',
-    version: '6.4.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: true,
     lazyload: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -368,6 +372,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://devtunes.github.io/zh/zh/posts/About-Recursion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="回锅肉">
+      <meta itemprop="description" content="保持饥饿，保持愚蠢。">
+      <meta itemprop="image" content="/zh/images/avatar-sf.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学习与探索笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/zh/posts/About-Recursion/" itemprop="url">
+                  浅谈递归
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-29 21:41:14" itemprop="dateCreated datePublished" datetime="2018-08-29T21:41:14+08:00">2018-08-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-02 23:37:29" itemprop="dateModified" datetime="2018-09-02T23:37:29+08:00">2018-09-02</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="浅谈递归"><a href="#浅谈递归" class="headerlink" title="浅谈递归"></a>浅谈递归</h1><p>递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
+<p>用一张图来说明：</p>
+<img src="/zh/posts/About-Recursion/Recursion-Google.png" title="不过这个递归好像会导致 StackOverflow 😂">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/zh/posts/About-Recursion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://devtunes.github.io/zh/zh/posts/Project-Algorithms-I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,7 +593,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-18 00:50:51" itemprop="dateModified" datetime="2018-08-18T00:50:51+08:00">2018-08-18</time>
+                <time title="修改时间：2018-09-08 00:15:51" itemprop="dateModified" datetime="2018-09-08T00:15:51+08:00">2018-09-08</time>
               
             
           </span>
@@ -458,7 +620,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -619,7 +781,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -724,7 +886,7 @@
                 
                   <a href="/zh/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -747,7 +909,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -780,6 +946,12 @@
 
           
           
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/zh/images/cc-by-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
 
           
           
@@ -797,6 +969,8 @@
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
           
         </div>
       
@@ -889,15 +1063,15 @@
 
 
 
+
+
+
+
+
+
+
+
   
-
-
-
-
-
-
-
-
 
 
 
@@ -937,7 +1111,7 @@
 
   
   
-    <script type="text/javascript" src="/zh/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="256" alpha="0.6"  zIndex="-1" src="/zh/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
   
@@ -949,28 +1123,28 @@
   
 
 
-  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.1"></script>
 
-  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.0"></script>
-
-  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.1"></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
 
   
 
 
-  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.1"></script>
 
 
 
@@ -1345,11 +1519,39 @@
   
     
       
+        
+      
+    
+      
     
       
     
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
@@ -1364,8 +1566,8 @@
 
 
   
-  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.0"></script>
-  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.1"></script>
 
 
   

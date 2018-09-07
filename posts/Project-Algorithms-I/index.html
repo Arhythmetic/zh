@@ -29,6 +29,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" media="all" href="/zh/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -62,19 +66,19 @@
 
 <link href="/zh/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/zh/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+<link href="/zh/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.1">
 
 
-  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.0" color="#E91E63">
+  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.1" color="#E91E63">
 
 
 
@@ -89,13 +93,13 @@
   var CONFIG = {
     root: '/zh/',
     scheme: 'Gemini',
-    version: '6.4.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: true,
     lazyload: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -120,7 +124,7 @@
 <meta property="og:site_name" content="学习与探索笔记">
 <meta property="og:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-08-17T16:50:51.741Z">
+<meta property="og:updated_time" content="2018-09-07T16:15:51.566Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现一个算法与数据结构库（一）">
 <meta name="twitter:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
@@ -387,7 +391,10 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">实现一个算法与数据结构库（一）
+          <h2 class="post-title" itemprop="name headline">实现一个算法与数据结构库（一）<a href="https://github.com/Devtunes/Blogs/blob/master/zh/source/_posts/Project-Algorithms-I.md" class="post-edit-link" title="编辑" target="_blank">
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                
               
             
           </h2>
@@ -429,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-18 00:50:51" itemprop="dateModified" datetime="2018-08-18T00:50:51+08:00">2018-08-18</time>
+                <time title="修改时间：2018-09-08 00:15:51" itemprop="dateModified" datetime="2018-09-08T00:15:51+08:00">2018-09-08</time>
               
             
           </span>
@@ -456,7 +463,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -471,33 +478,11 @@
 <a id="more"></a>
 <h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。优先以 Java 语言进行实现，待 Java 版稳定后再以 C++ 实现。</p>
 <ol>
-<li><p>以《算法，第四版》和 Collections 框架为基础；</p>
-</li>
-<li><p>在实现上尽量保证效率（时间和空间复杂度）和正确性，同时追求代码可读性，一致性，可维护性和高复用度；</p>
-</li>
-<li><p>充分利用语言特性，保证类型安全，异常安全等。</p>
-</li>
+<li>以《算法，第四版》和 Collections 框架为基础；</li>
+<li>在实现上尽量保证效率（时间和空间复杂度）和正确性，同时追求代码可读性，一致性，可维护性和高复用度；</li>
+<li>充分利用语言特性，保证类型安全，异常安全等。</li>
 </ol>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
-<li><p>容器 / Container</p>
-<p>底层实现方式：</p>
-<ul>
-<li>数组容器 / ArrayContainer</li>
-<li>链式容器 / LinkedContainer</li>
-<li>树型容器 / TreeContainer</li>
-</ul>
-<p>数据结构类型：</p>
-<ul>
-<li>背包 / Bag</li>
-<li>栈 / Stack</li>
-<li>队列 / Queue</li>
-<li>优先队列 / PriorityQueue</li>
-<li>字典 / Map</li>
-<li>集合 / Set</li>
-</ul>
-</li>
-</ul>
-<blockquote>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><blockquote>
 <p>博客搭好这么久却一直没时间更新，今天先挖坑，就当是对自己的督促吧。</p>
 </blockquote>
 
@@ -524,7 +509,7 @@
     <a href="https://devtunes.github.io/zh/posts/Project-Algorithms-I/" title="实现一个算法与数据结构库（一）">https://devtunes.github.io/zh/posts/Project-Algorithms-I/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -560,6 +545,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/zh/posts/About-Recursion/" rel="prev" title="浅谈递归">
+                浅谈递归 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -643,7 +632,7 @@
                 
                   <a href="/zh/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -666,7 +655,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -698,6 +691,12 @@
           
 
           
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/zh/images/cc-by-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
           
 
           
@@ -732,6 +731,8 @@
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
           
         </div>
       
@@ -824,15 +825,15 @@
 
 
 
+
+
+
+
+
+
+
+
   
-
-
-
-
-
-
-
-
 
 
 
@@ -872,7 +873,7 @@
 
   
   
-    <script type="text/javascript" src="/zh/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="256" alpha="0.6"  zIndex="-1" src="/zh/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
   
@@ -884,32 +885,32 @@
   
 
 
-  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.1"></script>
 
-  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.0"></script>
-
-  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.1"></script>
 
 
 
   
-  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.4.0"></script>
-<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.4.0"></script>
+  
+
+
+  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.4.1"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.1"></script>
 
 
 
@@ -1328,8 +1329,8 @@
 
 
   
-  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.0"></script>
-  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.0"></script>
+  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.1"></script>
 
 
   
