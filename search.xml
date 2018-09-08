@@ -28,23 +28,23 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于]]></title>
-    <url>%2Fzh%2Fabout%2Findex.html</url>
-    <content type="text"><![CDATA[热爱计算机热爱互联网热爱人工智能 极客完美主义者兴趣和好奇心驱动 保持饥饿，保持愚蠢。]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[书籍]]></title>
     <url>%2Fzh%2Fbooks%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[课程]]></title>
-    <url>%2Fzh%2Fcourses%2Findex.html</url>
-    <content type="text"></content>
+    <title><![CDATA[关于]]></title>
+    <url>%2Fzh%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[热爱计算机热爱互联网热爱人工智能 极客完美主义者兴趣和好奇心驱动 保持饥饿，保持愚蠢。]]></content>
   </entry>
   <entry>
     <title><![CDATA[分类]]></title>
     <url>%2Fzh%2Fcategories%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[课程]]></title>
+    <url>%2Fzh%2Fcourses%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
