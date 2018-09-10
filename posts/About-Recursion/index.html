@@ -117,7 +117,7 @@
 
 
   <meta name="description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
-<meta name="keywords" content="递归,编程">
+<meta name="keywords" content="总结,思考">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
 <meta property="og:url" content="https://devtunes.github.io/zh/posts/About-Recursion/index.html">
@@ -126,7 +126,7 @@
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://devtunes.github.io/zh/posts/About-Recursion/Recursion-Google.png">
 <meta property="og:image" content="https://devtunes.github.io/zh/posts/About-Recursion/Recursion-Process.svg">
-<meta property="og:updated_time" content="2018-09-09T16:04:55.652Z">
+<meta property="og:updated_time" content="2018-09-09T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈递归">
 <meta name="twitter:description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
@@ -422,7 +422,7 @@
                 
               
 
-              <time title="创建时间：2018-08-29 21:41:14" itemprop="dateCreated datePublished" datetime="2018-08-29T21:41:14+08:00">2018-08-29</time>
+              <time title="创建时间：2018-08-29 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-29T00:00:00+08:00">2018-08-29</time>
             
 
             
@@ -439,11 +439,36 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-10 00:04:55" itemprop="dateModified" datetime="2018-09-10T00:04:55+08:00">2018-09-10</time>
+                <time title="修改时间：2018-09-10 00:00:00" itemprop="dateModified" datetime="2018-09-10T00:00:00+08:00">2018-09-10</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/zh/categories/编程/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/zh/categories/编程/递归/" itemprop="url" rel="index"><span itemprop="name">递归</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -482,7 +507,7 @@
 <li><strong>改写成循环的时候需要用到栈的</strong></li>
 </ol>
 <p>第一种情况的例子有用于求最大公约数的辗转相除算法，还有求斐波那契数列第 n 项的算法，二分查找等：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number == <span class="number">0</span> || number == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> number;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(number - <span class="number">1</span>) + fibonacci(number - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> fa = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> fb = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> fc = fa + fb;</span><br><span class="line">            fa = fb;</span><br><span class="line">            fb = fc;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fa;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number == <span class="number">0</span> || number == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> number;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(number - <span class="number">1</span>) + fibonacci(number - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 尾递归式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TailRecursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(<span class="number">0</span>, <span class="number">1</span>, number);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> current, <span class="keyword">int</span> next, <span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (number == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(next, current + next, number--);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式斐波那契算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> next = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> temporary = current + next;</span><br><span class="line">            current = next;</span><br><span class="line">            next = temporary;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> current;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过上面的代码可以看到，这一类的递归和循环之间存在着比较直接的对应关系，改写成循环不需要借助任何辅助数据结构，并且改写成循环之后还有可能降低开销甚至时间复杂度。例如：求斐波那契数列第 n 项的算法的递归形式的时间复杂的是惊人的 $O(2^n)$，而对应的循环形式的时间复杂度是 $O(n)$。</p>
 <p>第二种情况的例子有二叉树的遍历等：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里以二叉树的中序遍历为例</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 二叉树节点</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">    Item item;</span><br><span class="line">    Node&lt;Item&gt; left;</span><br><span class="line">    Node&lt;Item&gt; right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树中序遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        traverse(root.left);</span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">        traverse(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中序遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Node&lt;Item&gt;&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        Node&lt;Item&gt; node = root;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span> || !stack.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.left();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            node = stack.pop();</span><br><span class="line">            System.out.println(node.item);</span><br><span class="line">            node = node.right();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -505,7 +530,7 @@
 <p>以辗转相除算法的递归函数为例，其执行过程如下图所示：</p>
 <img src="/zh/posts/About-Recursion/Recursion-Process.svg" title="辗转相除算法的递归函数执行流程图示">
 <blockquote>
-<p>剩下的明天再更，睡觉去了。。。😂</p>
+<p>剩下的明天再更😂</p>
 </blockquote>
 
       
@@ -541,9 +566,9 @@
       
         <div class="post-tags">
           
-            <a href="/zh/tags/递归/" rel="tag"># 递归</a>
+            <a href="/zh/tags/总结/" rel="tag"># 总结</a>
           
-            <a href="/zh/tags/编程/" rel="tag"># 编程</a>
+            <a href="/zh/tags/思考/" rel="tag"># 思考</a>
           
         </div>
       
@@ -655,6 +680,27 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/zh/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
               
                 
@@ -671,11 +717,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -889,7 +931,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="256" alpha="0.6"  zIndex="-1" src="/zh/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="128" alpha="0.6"  zIndex="-1" src="/zh/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
   
