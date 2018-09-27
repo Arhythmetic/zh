@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://devtunes.github.io/zh/posts/Paxos-Made-Simple-Reading/</loc>
-    
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://devtunes.github.io/zh/about/index.html</loc>
-    
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://devtunes.github.io/zh/books/index.html</loc>
-    
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://devtunes.github.io/zh/categories/index.html</loc>
-    
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://devtunes.github.io/zh/courses/index.html</loc>
     
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
+    <lastmod>2018-09-27T15:24:31.344Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtunes.github.io/zh/ideas/index.html</loc>
     
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
+    <lastmod>2018-09-27T15:24:31.344Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://devtunes.github.io/zh/tags/index.html</loc>
     
-    <lastmod>2018-09-27T14:05:39.203Z</lastmod>
+    <lastmod>2018-09-27T15:24:31.344Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://devtunes.github.io/zh/posts/Paxos-Made-Simple-Reading/</loc>
+    
+    <lastmod>2018-09-27T15:24:31.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://devtunes.github.io/zh/about/index.html</loc>
+    
+    <lastmod>2018-09-27T15:24:31.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://devtunes.github.io/zh/books/index.html</loc>
+    
+    <lastmod>2018-09-27T15:24:31.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://devtunes.github.io/zh/categories/index.html</loc>
+    
+    <lastmod>2018-09-27T15:24:31.340Z</lastmod>
     
   </url>
   
