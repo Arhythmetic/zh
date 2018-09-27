@@ -418,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2018-09-27 00:00:00 / 修改时间：14:15:41" itemprop="dateCreated datePublished" datetime="2018-09-27T00:00:00+08:00">2018-09-27</time>
+              <time title="创建时间：2018-09-27 00:00:00 / 修改时间：14:19:13" itemprop="dateCreated datePublished" datetime="2018-09-27T00:00:00+08:00">2018-09-27</time>
             
 
             
@@ -483,7 +483,7 @@
       
         
           
-            <h1 id="Paxos-Made-Simple-阅读，翻译及总结"><a href="#Paxos-Made-Simple-阅读，翻译及总结" class="headerlink" title="Paxos Made Simple 阅读，翻译及总结"></a>Paxos Made Simple 阅读，翻译及总结</h1><h2 id="Warm-up-预热"><a href="#Warm-up-预热" class="headerlink" title="Warm-up / 预热"></a>Warm-up / 预热</h2><p>The Paxos algorithm, when presented in plain English, is very simple. </p>
+            <h1 id="Paxos-Made-Simple-阅读，翻译及总结"><a href="#Paxos-Made-Simple-阅读，翻译及总结" class="headerlink" title="Paxos Made Simple 阅读，翻译及总结"></a>Paxos Made Simple 阅读，翻译及总结</h1><h2 id="Warm-up-预热"><a href="#Warm-up-预热" class="headerlink" title="Warm-up / 预热"></a>Warm-up / 预热</h2><p>The Paxos algorithm, when presented in plain English, is very simple.</p>
 <p align="right">Paxos Made Simple, by Leslie Lamport</p>
 
 <p>The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don’t have the brain of Leslie Lamport.</p>
@@ -556,10 +556,10 @@
 <p>We would assume that some proposal with number m and value v is chosen and show that any proposal issued with number n &gt; m also has value v. / 假设一份序号为 m 值为 v 的议案 (m, v) 已经被通过，试证任何已发起的序号为 n 且 n &gt; m 的议案都包含值 v。</p>
 <p>We would make the proof easier by using induction on n, so we can prove that proposal number n has value v under the additional assumption that every proposal issued with a number in m . . (n − 1) has value v , where i . . j denotes the set of numbers from i through j . / 为了简化证明过程，我们对 n 使用数学归纳法，这样我们就可以通过附加假设条件每一份以及发起的序号在 m 到 n-1 这个闭区间的议案都包含值 v 来证明序号为 n 的议案包含值 v。</p>
 <p>For the proposal numbered m to be chosen, there must be some set C consisting of a majority of acceptors such that every acceptor in C accepted it. / 对于将要被通过的序号为 m 的议案，一定存在一个集合 C 由多数议员构成，并且集合 C 中的所有议员都赞成了该议案。</p>
-<p>Combining this with the induction assumption, the hypothesis that m is chosen implies / 再结合刚才的归纳假设，假设 m 已被通过则意味着: </p>
+<p>Combining this with the induction assumption, the hypothesis that m is chosen implies / 再结合刚才的归纳假设，假设 m 已被通过则意味着:</p>
 <center><br>    Every acceptor in C has accepted a proposal with number in m ..(n − 1), and every proposal with number in m ..(n − 1) accepted by any acceptor has value v. / 集合 C 中的每一位议员都接受了序号在 m 到 n-1 这个闭区间中的某个提议，并且每个序号在 m 到 n-1 这个闭区间中的提议都被包含值 v 的任意一位议员接受了。<br></center>
 
-<p>Since any set S consisting of a majority of acceptors contains at least one member of C, we can conclude that a proposal numbered n has value v by ensuring that the following invariant is maintained / 回顾前面对于’多数’议员的定义，由于任意由多数议员组成的集合 S 和集合 C 之间至少有一位共同议员，那么我们通过保证以下的不变性来得出序号为 n 的议案包含值 v 的结论: </p>
+<p>Since any set S consisting of a majority of acceptors contains at least one member of C, we can conclude that a proposal numbered n has value v by ensuring that the following invariant is maintained / 回顾前面对于’多数’议员的定义，由于任意由多数议员组成的集合 S 和集合 C 之间至少有一位共同议员，那么我们通过保证以下的不变性来得出序号为 n 的议案包含值 v 的结论:</p>
 <ul>
 <li>P2c / 约束 P2c: For any v and n, if a proposal with value v and number n is issued, then there is a set S consisting of a majority of acceptors such that either (a) no acceptor in S has accepted any proposal numbered less than n, or (b) v is the value of the highest-numbered proposal among all proposals numbered less than n accepted by the acceptors in S. / 对于任意的 v 和 n，如果一份值为 v 序号为 n 的议案被发起，那么就存在一个由多数议员构成的集合 S 满足下列条件之一：(a) 集合 S 中没有任何一个议员赞成了任何序号小于 n 的议案；(b) v 是集合 S 中的议员所赞成的所有序号小于 n 的议案中序号最大的那一份议案所包含的值。</li>
 </ul>
@@ -568,7 +568,7 @@
 </blockquote>
 <p>To maintain the invariance of P2c, a proposer that wants to issue a proposal numbered n must learn the highest-numbered proposal with number less than n, if any, that has been or will be accepted by each acceptor in some majority of acceptors. / 为了维持约束 P2c 的不变性，当一位议长想发起一份值为 n 的议案之前，如果存在序号小于 n 的的议案的话，他必须先知道其中已经或者将要被多数议员赞成的序号最大的那一份议案。</p>
 <p>Learning about proposals already accepted is easy enough; predicting future acceptances is hard. Instead of trying to predict the future, the proposer controls it by extracting a promise that there won’t be any such acceptances. In other words, the proposer requests that the acceptors not accept any more proposals numbered less than n. / 相对于预测将来的议员赞成情况而言，了解已经被议员赞成的议案要简单得多。因此，与其花大力气去预测未来，还不如通过承诺的方式来让议长控制不会有不符合条件的议案赞成情况。换句话说，议长要求议员作出承诺，保证不会再赞成序号小于 n 的议案。</p>
-<p>This leads to the following algorithm for issuing proposals. / 这样，我们就得到了发起议案的算法: </p>
+<p>This leads to the following algorithm for issuing proposals. / 这样，我们就得到了发起议案的算法:</p>
 <ol>
 <li><p>A proposer chooses a new proposal number n and sends a request to each member of some set of acceptors, asking it to respond with / 一位议长通过一个新的议案序号 n，然后向某个集合（应该是要大于等于’多数’议员）的全部议员发起请求，并要求对方回复以下两方面的内容:  </p>
 <p>(a) A promise never again to accept a proposal numbered less than n, and / 要求对方作出承诺，保证不再赞成任何序号小于 n 的议案</p>
@@ -597,13 +597,13 @@
 <li>P1a / 约束 P1a: <strong>An acceptor can accept a proposal numbered n iff it has not responded to a prepare request having a number greater than n. / 当且仅当一位议员没有响应过序号大于 n 的准备请求时，该议员才能赞成序号为 n 的议案。</strong></li>
 <li>P2c / 约束 P2c: <strong>For any v and n, if a proposal with value v and number n is issued, then there is a set S consisting of a majority of acceptors such that either (a) no acceptor in S has accepted any proposal numbered less than n, or (b) v is the value of the highest-numbered proposal among all proposals numbered less than n accepted by the acceptors in S. / 对于任意的 v 和 n，如果一份值为 v 序号为 n 的议案被发起，那么就存在一个由多数议员构成的集合 S 满足下列条件之一：(a) 集合 S 中没有任何一个议员赞成了任何序号小于 n 的议案；(b) v 是集合 S 中的议员所赞成的所有序号小于 n 的议案中序号最大的那一份议案所包含的值。</strong></li>
 </ul>
-<p>Properties of the algorithm / 算法的特性: </p>
+<p>Properties of the algorithm / 算法的特性:</p>
 <ul>
 <li>Immutability of value / 值的不可变性</li>
 <li>Minority obeying majority / 少数服从多数</li>
 <li>Prevent the occurrence, Instead of trying to predict the future / 与其预测未来，不如提前预防</li>
 </ul>
-<h3 id="The-Algorithm-算法"><a href="#The-Algorithm-算法" class="headerlink" title="The Algorithm / 算法"></a>The Algorithm / 算法</h3><p>Putting the actions of the proposer and acceptor together, we see that the algorithm operates in the following two phases. / 将上面的过程整合在一起，我们就得到了最终的算法（通过值部分）: </p>
+<h3 id="The-Algorithm-算法"><a href="#The-Algorithm-算法" class="headerlink" title="The Algorithm / 算法"></a>The Algorithm / 算法</h3><p>Putting the actions of the proposer and acceptor together, we see that the algorithm operates in the following two phases. / 将上面的过程整合在一起，我们就得到了最终的算法（通过值部分）:</p>
 <ul>
 <li><p>Phase 1 / 阶段 1</p>
 <ul>
@@ -658,7 +658,7 @@
 <li><p>Raft</p>
 <p>Raft is a consensus algorithm that is designed to be easy to understand. It’s equivalent to Paxos in fault-tolerance and performance. The difference is that it’s decomposed into relatively independent subproblems, and it cleanly addresses all major pieces needed for practical systems. / Raft 算法被设计的更容易理解。在容错和性能方面与 Paxos 算法相当。</p>
 <blockquote>
-<p>论文及实现：<a href="https://raft.github.io/" target="_blank" rel="noopener">https://raft.github.io/</a></p>
+<p>论文及实现：<a href="https://raft.github.io/" target="_blank" rel="noopener">Raft Consensus Algorithm</a></p>
 </blockquote>
 </li>
 <li><p>微信对于 Paxos 算法的工业级 C++ 实现: <a href="https://github.com/Tencent/phxpaxos" target="_blank" rel="noopener">PhxPaxos</a>，应用于后台核心业务的存储体系 PaxosStore</p>
