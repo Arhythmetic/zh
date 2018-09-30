@@ -544,7 +544,9 @@
 <li><strong>P1 / 约束 P1: An acceptor must accept the first proposal that it receives. / 一位议员必须赞成其收到的第一份议案。</strong></li>
 </ul>
 <p>But this requirement raises a problem. Several values could be proposed by different proposers at about the same time, leading to a situation in which every acceptor has accepted a value, but no single value is accepted by a majority of them. Even with just two proposed values, if each is accepted by about half the acceptors, failure of a single acceptor could make it impossible to learn which of the values was chosen. / 但是约束 P1 还不够完备。不同的议长可能会同时发起多个不同的议案，可能导致不同的议员赞成了不同的议案，但是没有议案获得了多数议员的赞成。<strong>假设有两个议案，每个都获得了大约半数议员的赞同，如果议员总数为偶数个，系统将直接陷入死锁；如果议员总数为奇数个，那么最终决定权就落在了单个议员的手里，如果这时候该议员失效，那么系统就将陷入死锁。</strong></p>
-<p>&gt; 上面的翻译我综合了自己的理解，可能和原文有些对应不上。</p>
+<blockquote>
+<p>上面的翻译我综合了自己的理解，可能和原文有些对应不上。</p>
+</blockquote>
 <p>P1 and the requirement that a value is chosen only when it is accepted by a majority of acceptors imply that an acceptor must be allowed to accept more than one proposal. / 约束 P1 和约束<em>当一份议案被多数议员赞成后才会被通过</em>隐含了条件<em>一位议员必须可以赞成不止一份议案</em>。（反证法）</p>
 <p>We keep track of the different proposals that an acceptor may accept by assigning a (natural) number to each proposal, so a proposal consists of a proposal number and a value. To prevent confusion, we require that different proposals have different numbers. / 现在我们给议案分配一个自然数，所以现在一份议案是一个二元组（议案序号，值）。同时，为了唯一确定每一份议案，我们规定每一份议案的序号确定且唯一，并且议案的序号必须满足全序关系（全序关系即集合$X$上的反对称（若 $a \le b$ 且 $b \le a$ 则 $a = b$）的、传递（若 $a \le b$ 且 $b \le c$ 则 $a \le c$）的和完全（$a \le b$ 或 $b \le a$）的二元关系，简而言之，集合内的任意两个元素可以比较大小，计算机中的整型就满足全序关系，而 IEEE 754 定义的浮点数中，由于 $NaN \not\le NaN$，所以 IEEE 754 不满足全序关系）。</p>
 <p>A value is chosen when a single proposal with that value has been accepted by a majority of the acceptors. In that case, we say that the proposal (as well as its value) has been chosen. / 当一份包含值 v 的议案被多数议员赞成的时候，我们就说该议案（也包括值 v） 被通过了。</p>
