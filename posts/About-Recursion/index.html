@@ -66,19 +66,19 @@
 
 <link href="/zh/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/zh/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/zh/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.1" color="#E91E63">
+  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=6.4.2" color="#E91E63">
 
 
 
@@ -93,7 +93,7 @@
   var CONFIG = {
     root: '/zh/',
     scheme: 'Gemini',
-    version: '6.4.1',
+    version: '6.4.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: true,
@@ -117,7 +117,7 @@
 
 
   <meta name="description" content="浅谈递归递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
-<meta name="keywords" content="思考,总结">
+<meta name="keywords" content="总结,思考">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
 <meta property="og:url" content="https://devtunes.github.io/zh/posts/About-Recursion/index.html">
@@ -579,9 +579,9 @@
       
         <div class="post-tags">
           
-            <a href="/zh/tags/思考/" rel="tag"># 思考</a>
-          
             <a href="/zh/tags/总结/" rel="tag"># 总结</a>
+          
+            <a href="/zh/tags/思考/" rel="tag"># 思考</a>
           
         </div>
       
@@ -717,6 +717,18 @@
                     
                       
                     
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -729,6 +741,16 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/zh/tags/index.html">
                     
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -968,32 +990,32 @@
   
 
 
-  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/utils.js?v=6.4.2"></script>
 
-  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.1"></script>
-
-  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/motion.js?v=6.4.2"></script>
 
 
 
   
-  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.4.1"></script>
-<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.4.1"></script>
+  
+
+
+  <script type="text/javascript" src="/zh/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/zh/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/zh/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/zh/js/src/post-details.js?v=6.4.2"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -1022,8 +1044,12 @@
             loadComments();
           } else {
             $(window).on('scroll.disqus_scroll', function () {
-              var scrollTop = document.documentElement.scrollTop;
-              if (scrollTop >= offsetTop) {
+              // offsetTop may changes because of manually resizing browser window or lazy loading images.
+              var offsetTop = $('#comments').offset().top - $(window).height();
+              var scrollTop = $(window).scrollTop();
+
+              // pre-load comments a bit? (margin or anything else)
+              if (offsetTop - scrollTop < 60) {
                 $(window).off('.disqus_scroll');
                 loadComments();
               }
@@ -1436,8 +1462,8 @@
 
 
   
-  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.1"></script>
-  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/zh/js/src/js.cookie.js?v=6.4.2"></script>
+  <script type="text/javascript" src="/zh/js/src/scroll-cookie.js?v=6.4.2"></script>
 
 
   
