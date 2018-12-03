@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -117,18 +117,19 @@
 
 
   <meta name="description" content="保持饥饿，保持愚蠢。">
-<meta name="keywords" content="技术, 工程, 计算机科学, 算法, 机器学习, 互联网后台">
 <meta property="og:type" content="website">
-<meta property="og:title" content="学习与探索笔记">
+<meta property="og:title" content="学习与探索">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/tags/测试/index.html">
-<meta property="og:site_name" content="学习与探索笔记">
+<meta property="og:site_name" content="学习与探索">
 <meta property="og:description" content="保持饥饿，保持愚蠢。">
-<meta property="og:locale" content="zh">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习与探索笔记">
+<meta name="twitter:title" content="学习与探索">
 <meta name="twitter:description" content="保持饥饿，保持愚蠢。">
 
 
+
+  <link rel="alternate" href="/zh/atom.xml" title="学习与探索" type="application/atom+xml">
 
 
 
@@ -143,7 +144,7 @@
   };
 </script>
 
-  <title>标签: 测试 | 学习与探索笔记</title>
+  <title>标签: 测试 | 学习与探索</title>
   
 
 
@@ -183,7 +184,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -201,7 +202,7 @@
     <div class="custom-logo-site-title">
       <a href="/zh/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">学习与探索笔记</span>
+        <span class="site-title">学习与探索</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -403,7 +404,7 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/zh/posts/Hello-World/" itemprop="url">
+            <a class="post-title-link" href="/zh/posts/hello-world/" itemprop="url">
               
                 <span itemprop="name">你好，世界</span>
               
@@ -459,7 +460,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-sf.png" alt="回锅肉">
+              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-ada.png" alt="回锅肉">
             
               <p class="site-author-name" itemprop="name">回锅肉</p>
               <p class="site-description motion-element" itemprop="description">保持饥饿，保持愚蠢。</p>
@@ -554,6 +555,13 @@
             </nav>
           
 
+          
+            <div class="feed-link motion-element">
+              <a href="/zh/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -744,7 +752,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="128" alpha="0.8" zindex="-1" src="/zh/lib/canvas-ribbon/ribbon.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="128" alpha="1" zindex="-1" src="/zh/lib/ribbon/dist/ribbon.min.js"></script>
   
 
   
@@ -1027,7 +1035,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1240,6 +1248,9 @@
         ta.focus()
         var result = document.execCommand('copy')
         document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
         
         $(this).blur()
       })).on('mouseleave', function (e) {

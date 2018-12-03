@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,20 +116,23 @@
 
 
 
-  <meta name="description" content="热爱计算机热爱互联网热爱人工智能  极客完美主义者兴趣和好奇心驱动  保持饥饿，保持愚蠢。">
-<meta name="keywords" content="技术, 工程, 计算机科学, 算法, 机器学习, 互联网后台">
+  <meta name="description" content="热爱计算机 热爱互联网 热爱人工智能   极客 完美主义者 兴趣和好奇心驱动   保持饥饿，保持愚蠢。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/about/index.html">
-<meta property="og:site_name" content="学习与探索笔记">
-<meta property="og:description" content="热爱计算机热爱互联网热爱人工智能  极客完美主义者兴趣和好奇心驱动  保持饥饿，保持愚蠢。">
-<meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-11-26T14:56:19.973Z">
+<meta property="og:site_name" content="学习与探索">
+<meta property="og:description" content="热爱计算机 热爱互联网 热爱人工智能   极客 完美主义者 兴趣和好奇心驱动   保持饥饿，保持愚蠢。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-30T15:12:11.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="热爱计算机热爱互联网热爱人工智能  极客完美主义者兴趣和好奇心驱动  保持饥饿，保持愚蠢。">
+<meta name="twitter:description" content="热爱计算机 热爱互联网 热爱人工智能   极客 完美主义者 兴趣和好奇心驱动   保持饥饿，保持愚蠢。">
 
 
+  
+
+
+  <link rel="alternate" href="/zh/atom.xml" title="学习与探索" type="application/atom+xml">
 
 
 
@@ -144,7 +147,7 @@
   };
 </script>
 
-  <title>关于 | 学习与探索笔记</title>
+  <title>关于 | 学习与探索</title>
   
 
 
@@ -184,7 +187,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -202,7 +205,7 @@
     <div class="custom-logo-site-title">
       <a href="/zh/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">学习与探索笔记</span>
+        <span class="site-title">学习与探索</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -410,11 +413,19 @@
       <div class="post-body han-init-context">
         
         
-          <center><br>热爱计算机<br>热爱互联网<br>热爱人工智能<br></center>
-
-<center><br>极客<br>完美主义者<br>兴趣和好奇心驱动<br></center>
-
-<center><br>保持饥饿，保持愚蠢。<br></center>
+          <center>
+热爱计算机
+热爱互联网
+热爱人工智能
+</center>
+<center>
+极客
+完美主义者
+兴趣和好奇心驱动
+</center>
+<center>
+保持饥饿，保持愚蠢。
+</center>
 
         
       </div>
@@ -473,7 +484,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-sf.png" alt="回锅肉">
+              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-ada.png" alt="回锅肉">
             
               <p class="site-author-name" itemprop="name">回锅肉</p>
               <p class="site-description motion-element" itemprop="description">保持饥饿，保持愚蠢。</p>
@@ -568,6 +579,13 @@
             </nav>
           
 
+          
+            <div class="feed-link motion-element">
+              <a href="/zh/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -758,7 +776,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="128" alpha="0.8" zindex="-1" src="/zh/lib/canvas-ribbon/ribbon.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="128" alpha="1" zindex="-1" src="/zh/lib/ribbon/dist/ribbon.min.js"></script>
   
 
   
@@ -1080,7 +1098,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1293,6 +1311,9 @@
         ta.focus()
         var result = document.execCommand('copy')
         document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
         
         $(this).blur()
       })).on('mouseleave', function (e) {

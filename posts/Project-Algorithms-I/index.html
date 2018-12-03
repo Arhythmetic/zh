@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,20 +116,22 @@
 
 
 
-  <meta name="description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
+  <meta name="description" content="动机  动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 <meta name="keywords" content="目录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现一个算法与数据结构库（一）">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/posts/Project-Algorithms-I/index.html">
-<meta property="og:site_name" content="学习与探索笔记">
-<meta property="og:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
-<meta property="og:locale" content="zh">
+<meta property="og:site_name" content="学习与探索">
+<meta property="og:description" content="动机  动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-09T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现一个算法与数据结构库（一）">
-<meta name="twitter:description" content="动机 动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
+<meta name="twitter:description" content="动机  动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。 动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。 动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。  基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。">
 
 
+
+  <link rel="alternate" href="/zh/atom.xml" title="学习与探索" type="application/atom+xml">
 
 
 
@@ -144,7 +146,7 @@
   };
 </script>
 
-  <title>实现一个算法与数据结构库（一） | 学习与探索笔记</title>
+  <title>实现一个算法与数据结构库（一） | 学习与探索</title>
   
 
 
@@ -184,7 +186,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -202,7 +204,7 @@
     <div class="custom-logo-site-title">
       <a href="/zh/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">学习与探索笔记</span>
+        <span class="site-title">学习与探索</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -377,11 +379,11 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="回锅肉">
       <meta itemprop="description" content="保持饥饿，保持愚蠢。">
-      <meta itemprop="image" content="/zh/images/avatar-sf.png">
+      <meta itemprop="image" content="/zh/images/avatar-ada.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="学习与探索笔记">
+      <meta itemprop="name" content="学习与探索">
     </span>
 
     
@@ -417,7 +419,7 @@
                 
               
 
-              <time title="创建时间：2018-08-09 00:00" itemprop="dateCreated datePublished" datetime="2018-08-09T00:00:00+08:00">2018-08-09</time>
+              <time title="创建时间：2018-08-09 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-09T00:00:00+08:00">2018-08-09</time>
             
 
             
@@ -434,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-10 00:00" itemprop="dateModified" datetime="2018-09-10T00:00:00+08:00">2018-09-10</time>
+                <time title="修改时间：2018-09-10 00:00:00" itemprop="dateModified" datetime="2018-09-10T00:00:00+08:00">2018-09-10</time>
               
             
           </span>
@@ -497,7 +499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">422</span>
+                <span title="本文字数">425</span>
               
 
               
@@ -531,20 +533,23 @@
       
 
       
-        <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><ul>
+        <h1>动机</h1>
+<ul>
 <li>动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。</li>
 <li>动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。</li>
 <li>动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。</li>
 </ul>
 <p>基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。</p>
 <a id="more"></a>
-<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。</p>
+<h1>计划</h1>
+<p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。</p>
 <ol>
 <li>以《算法，第四版》和 Collections 框架为基础；</li>
 <li>在实现上尽量保证效率（时间和空间复杂度）和正确性，同时追求代码可读性，一致性，可维护性和高复用度；</li>
 <li>充分利用语言特性，保证类型安全，异常安全等。</li>
 </ol>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><blockquote>
+<h1>目录</h1>
+<blockquote>
 <p>博客搭好这么久却一直没时间更新，今天先挖坑，就当是对自己的督促吧。</p>
 </blockquote>
 
@@ -571,7 +576,7 @@
     <a href="https://bitrhythm.github.io/zh/posts/Project-Algorithms-I/" title="实现一个算法与数据结构库（一）">https://bitrhythm.github.io/zh/posts/Project-Algorithms-I/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="noopener noreferrer nofollow">署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -594,7 +599,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/zh/posts/Hello-World/" rel="next" title="你好，世界">
+              <a href="/zh/posts/hello-world/" rel="next" title="你好，世界">
                 <i class="fa fa-chevron-left"></i> 你好，世界
               </a>
             
@@ -675,7 +680,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-sf.png" alt="回锅肉">
+              <img class="site-author-image" itemprop="image" src="/zh/images/avatar-ada.png" alt="回锅肉">
             
               <p class="site-author-name" itemprop="name">回锅肉</p>
               <p class="site-description motion-element" itemprop="description">保持饥饿，保持愚蠢。</p>
@@ -771,6 +776,13 @@
           
 
           
+            <div class="feed-link motion-element">
+              <a href="/zh/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
             <div class="links-of-author motion-element">
@@ -823,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动机"><span class="nav-number">1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计划"><span class="nav-number">2.</span> <span class="nav-text">计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">动机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">目录</span></a></li></ol></div>
             
 
           </div>
@@ -976,7 +988,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="128" alpha="0.8" zindex="-1" src="/zh/lib/canvas-ribbon/ribbon.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="128" alpha="1" zindex="-1" src="/zh/lib/ribbon/dist/ribbon.min.js"></script>
   
 
   
@@ -1298,7 +1310,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1511,6 +1523,9 @@
         ta.focus()
         var result = document.execCommand('copy')
         document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
         
         $(this).blur()
       })).on('mouseleave', function (e) {
