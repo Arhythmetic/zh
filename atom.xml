@@ -80,49 +80,19 @@
   </entry>
   
   <entry>
-    <title>实现一个算法与数据结构库（一）</title>
-    <link href="https://bitrhythm.github.io/zh/posts/Project-Algorithms-I/"/>
-    <id>https://bitrhythm.github.io/zh/posts/Project-Algorithms-I/</id>
-    <published>2018-08-08T16:00:00.000Z</published>
-    <updated>2018-09-09T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>动机</h1><ul><li>动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。</li><li>动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。</li><li>动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。</li></ul><p>基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。</p><a id="more"></a><h1>计划</h1><p>目前还处于前期开发状态，待 API 稳定后，将会以专栏文章的形式解析其设计思路，实现过程及源代码，并和现有实现进行对比分析。目前正在开发中的主要是容器（对标 Java 的集合类）。</p><ol><li>以《算法，第四版》和 Collections 框架为基础；</li><li>在实现上尽量保证效率（时间和空间复杂度）和正确性，同时追求代码可读性，一致性，可维护性和高复用度；</li><li>充分利用语言特性，保证类型安全，异常安全等。</li></ol><h1>目录</h1><blockquote><p>博客搭好这么久却一直没时间更新，今天先挖坑，就当是对自己的督促吧。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1&gt;动机&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;动机一：学习了普林斯顿大学 Robert Sedgewick 教授的算法公开课之后想要更加深入的学习。&lt;/li&gt;
-&lt;li&gt;动机二：读了 Java 的 Collections 框架的部分源代码后，希望能在此基础上做的更好。&lt;/li&gt;
-&lt;li&gt;动机三：产生了一种有助于降低代码耦合度，提升灵活性和复用程度的设计思路，想要验证这种思路。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;基于以上三点，我决定重构在学习算法公开课的时候用于练习的算法库。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="项目" scheme="https://bitrhythm.github.io/zh/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-      <category term="算法" scheme="https://bitrhythm.github.io/zh/categories/%E9%A1%B9%E7%9B%AE/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="目录" scheme="https://bitrhythm.github.io/zh/tags/%E7%9B%AE%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>你好，世界</title>
     <link href="https://bitrhythm.github.io/zh/posts/hello-world/"/>
     <id>https://bitrhythm.github.io/zh/posts/hello-world/</id>
     <published>2018-03-19T16:00:00.000Z</published>
     <updated>2018-10-09T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1>你好，世界</h1><p>终于搭建好属于自己的博客啦！</p><p>主要分享技术和思想，偶尔也谈谈个人感想。</p><p>坚持原创，不定时更新。</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"iostream"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1>你好，世界</h1><p>这是我的个人博客。</p><p>主要分享对于技术学习和思考，但不局限于此。</p><p>坚持原创，不定时更新。</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"iostream"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><div class="note default"><p>Hello World!</p></div><div class="note primary"><p>Hello World!</p></div><div class="note success"><p>Hello World!</p></div><div class="note info"><p>Hello World!</p></div><div class="note warning"><p>Hello World!</p></div><div class="note danger"><p>Hello World!</p></div>]]></content>
     
     <summary type="html">
     
       &lt;h1&gt;你好，世界&lt;/h1&gt;
-&lt;p&gt;终于搭建好属于自己的博客啦！&lt;/p&gt;
-&lt;p&gt;主要分享技术和思想，偶尔也谈谈个人感想。&lt;/p&gt;
+&lt;p&gt;这是我的个人博客。&lt;/p&gt;
+&lt;p&gt;主要分享对于技术学习和思考，但不局限于此。&lt;/p&gt;
 &lt;p&gt;坚持原创，不定时更新。&lt;/p&gt;
     
     </summary>
