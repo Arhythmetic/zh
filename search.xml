@@ -30,7 +30,7 @@
   <entry>
     <title><![CDATA[你好，世界]]></title>
     <url>%2Fzh%2Fposts%2FHello-World%2F</url>
-    <content type="text"><![CDATA[你好，世界 这是我的个人博客。 主要分享对于技术学习和思考，但不局限于此。 坚持原创，不定时更新。 ¶ 代码 1234567// Javaclass HelloWorld &#123; public static void main() &#123; System.out.println("Hello World!"); &#125;&#125; 1234567// C#include "stdio.h"int main() &#123; printf("Hello World!\n"); return 0;&#125; 1234567// C++#include "iostream"int main() &#123; std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl; return 0;&#125; ¶ 笔记 Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! ¶ 图片 ¶ PDF Dummy]]></content>
+    <content type="text"><![CDATA[你好，世界 这是我的个人博客。 主要分享对于技术学习和思考，但不局限于此。 坚持原创，不定时更新。 ¶ 代码 1234567// Javaclass HelloWorld &#123; public static void main() &#123; System.out.println("Hello World!"); &#125;&#125; 1234567// C#include "stdio.h"int main() &#123; printf("Hello World!\n"); return 0;&#125; 1234567// C++#include "iostream"int main() &#123; std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl; return 0;&#125; ¶ 笔记 Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! ¶ 图片 ¶ PDF]]></content>
       <categories>
         <category>杂项</category>
       </categories>
