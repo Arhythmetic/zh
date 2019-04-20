@@ -54,6 +54,11 @@
     <content type="text"></content>
   </entry>
   <entry>
+    <title><![CDATA[课程]]></title>
+    <url>%2Fzh%2Fcourses%2Findex.html</url>
+    <content type="text"><![CDATA[¶ 基础 算法与数据结构 Algorithms, Part I 导师：Robert Sedgewick、Kevin Wayne 机构：Princeton University 平台：Coursera Algorithms, Part II 导师：Robert Sedgewick、Kevin Wayne 机构：Princeton University 平台：Coursera 6.006: Introduction to Algorithms 导师：Erik Demaine，Srinivas Devadas 机构：MIT 平台：MIT OpenCourseWare 6.046J: Design and Analysis of Algorithms 导师：Erik Demaine、Srinivas Devadas、Nancy Lynch 机构：MIT 平台：MIT OpenCourseWare Analysis of Algorithms 导师：Robert Sedgewick 机构：Princeton University 平台：Coursera 数据库 Databases Mini-courses &amp; Introduction to Databases 导师：Jennifer Widom 机构：Stanford University 平台：Stanford Lagunita 计算机网络 Introduction to Computer Networking 导师：Philip Levis、Nick McKeown 机构：Stanford University 平台：Stanford Lagunita 操作系统 6.828: Operating System Engineering 导师：Adam Belay、Frans Kaashoek 机构：MIT 平台：MIT 计算机体系结构 Computer Architecture 导师：David Wentzlaff 机构：Princeton University 平台：Coursera 编译原理 Compilers 导师：Alex Aiken 机构：Stanford University 平台：Stanford Lagunita ¶ 进阶 分布式系统 6.824: Distributed Systems 导师：Robert Morris、Malte Schwarzkopf 机构：MIT 平台：MIT 机器学习 Machine Learning 导师：Andrew Ng 机构：Stanford University 平台：Coursera Deep Learning Specialization 导师：Andrew Ng 机构：deeplearning.ai 平台：Coursera CS231n: Convolutional Neural Networks for Visual Recognition, 课程视频 导师：Fei-Fei Li、Justin Johnson、Serena Yeung 机构：Stanford University 平台：Stanford University CS224n: Natural Language Processing, 课程视频 导师：Chris Manning 机构：Stanford University 平台：Stanford University CS 294-112 Deep Reinforcement Learning 导师：Sergey Levine 机构：UC Berkeley 平台：UC Berkeley 数学 Convex Optimization 导师：Stephen Boyd、Henryk Blasinski、Neal Parikh、Ernest Ryu、Madeleine Udell 机构：Stanford University 平台：Stanford Lagunita Statistical Learning 导师：Trevor Hastie、Rob Tibshirani 机构：Stanford University 平台：Stanford Lagunita ¶ 兴趣 程序设计语言 Programming Languages, A, B, C 导师：Dan Grossman 机构：University of Washington 平台：Coursera]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[论文]]></title>
     <url>%2Fzh%2Fpapers%2Findex.html</url>
     <content type="text"><![CDATA[¶ 算法 Left-Leaning Red-Black Trees 作者：Robert Sedgewick ¶ 分布式系统 Paxos Made Simple 作者：Leslie Lamport Fast Paxos 作者：Leslie Lamport Raft ¶ 机器学习 YOLO]]></content>
@@ -62,10 +67,5 @@
     <title><![CDATA[标签]]></title>
     <url>%2Fzh%2Ftags%2Findex.html</url>
     <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[课程]]></title>
-    <url>%2Fzh%2Fcourses%2Findex.html</url>
-    <content type="text"><![CDATA[¶ 基础 算法与数据结构 Algorithms, Part I 导师：Robert Sedgewick、Kevin Wayne 机构：Princeton University 平台：Coursera Algorithms, Part II 导师：Robert Sedgewick、Kevin Wayne 机构：Princeton University 平台：Coursera 6.006: Introduction to Algorithms 导师：Erik Demaine，Srinivas Devadas 机构：MIT 平台：MIT OpenCourseWare 6.046J: Design and Analysis of Algorithms 导师：Erik Demaine、Srinivas Devadas、Nancy Lynch 机构：MIT 平台：MIT OpenCourseWare Analysis of Algorithms 导师：Robert Sedgewick 机构：Princeton University 平台：Coursera 数据库 Databases Mini-courses &amp; Introduction to Databases 导师：Jennifer Widom 机构：Stanford University 平台：Stanford Lagunita 计算机网络 Introduction to Computer Networking 导师：Philip Levis、Nick McKeown 机构：Stanford University 平台：Stanford Lagunita 操作系统 6.828: Operating System Engineering 导师：Adam Belay、Frans Kaashoek 机构：MIT 平台：MIT 计算机体系结构 Computer Architecture 导师：David Wentzlaff 机构：Princeton University 平台：Coursera 编译原理 Compilers 导师：Alex Aiken 机构：Stanford University 平台：Stanford Lagunita ¶ 进阶 分布式系统 6.824: Distributed Systems 导师：Robert Morris、Malte Schwarzkopf 机构：MIT 平台：MIT 机器学习 Machine Learning 导师：Andrew Ng 机构：Stanford University 平台：Coursera Deep Learning Specialization 导师：Andrew Ng 机构：deeplearning.ai 平台：Coursera CS231n: Convolutional Neural Networks for Visual Recognition, 课程视频 导师：Fei-Fei Li、Justin Johnson、Serena Yeung 机构：Stanford University 平台：Stanford University CS224n: Natural Language Processing, 课程视频 导师：Chris Manning 机构：Stanford University 平台：Stanford University CS 294-112 Deep Reinforcement Learning 导师：Sergey Levine 机构：UC Berkeley 平台：UC Berkeley 数学 Convex Optimization 导师：Stephen Boyd、Henryk Blasinski、Neal Parikh、Ernest Ryu、Madeleine Udell 机构：Stanford University 平台：Stanford Lagunita Statistical Learning 导师：Trevor Hastie、Rob Tibshirani 机构：Stanford University 平台：Stanford Lagunita ¶ 兴趣 程序设计语言 Programming Languages, A, B, C 导师：Dan Grossman 机构：University of Washington 平台：Coursera]]></content>
   </entry>
 </search>
