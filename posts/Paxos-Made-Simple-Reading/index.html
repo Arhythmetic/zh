@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
+  <meta name="description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
 <meta name="keywords" content="论文翻译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paxos Made Simple 翻译及总结">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
+<meta property="og:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-29T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paxos Made Simple 翻译及总结">
-<meta name="twitter:description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
+<meta name="twitter:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
   <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
 
 
@@ -417,7 +417,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="warm-up- 预热">Warm-up / 预热</h2>
+        <h1 id="paxos-made-simple- 翻译及总结">Paxos Made Simple 翻译及总结</h1>
+<h2 id="warm-up- 预热">Warm-up / 预热</h2>
 <p>The Paxos algorithm, when presented in plain English, is very simple.</p>
 <p align="right">Paxos Made Simple, by Leslie Lamport</p>
 The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don't have the brain of Leslie Lamport.
@@ -751,7 +752,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-number">1.</span> <span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-number">2.</span> <span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-number">3.</span> <span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-number">3.1.</span> <span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-number">3.2.</span> <span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-number">3.3.</span> <span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-number">3.4.</span> <span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-number">4.</span> <span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-number">5.</span> <span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-number">6.</span> <span class="nav-text">Extension / 拓展</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#paxos-made-simple- 翻译及总结"><span class="nav-text">Paxos Made Simple 翻译及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-text">Extension / 拓展</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
