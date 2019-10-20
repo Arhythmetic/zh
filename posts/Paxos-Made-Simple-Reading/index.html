@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
-<meta name="keywords" content="总结,一致性算法,翻译">
+  <meta name="description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
+<meta name="keywords" content="论文翻译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paxos Made Simple 翻译及总结">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
+<meta property="og:description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-29T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paxos Made Simple 翻译及总结">
-<meta name="twitter:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
+<meta name="twitter:description" content="Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain English, is still quite hard t">
   <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
 
 
@@ -358,19 +358,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/论文/" itemprop="url" rel="index">
-                    <span itemprop="name">论文</span>
-                  </a>
-                </span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/论文/分布式/" itemprop="url" rel="index">
-                    <span itemprop="name">分布式</span>
+                  <a href="/zh/categories/分布式系统/" itemprop="url" rel="index">
+                    <span itemprop="name">分布式系统</span>
                   </a>
                 </span>
 
@@ -428,11 +417,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="paxos-made-simple- 翻译及总结">Paxos Made Simple 翻译及总结</h1>
-<h2 id="warm-up- 预热">Warm-up / 预热</h2>
+        <h2 id="warm-up- 预热">Warm-up / 预热</h2>
 <p>The Paxos algorithm, when presented in plain English, is very simple.</p>
 <p align="right">Paxos Made Simple, by Leslie Lamport</p>
-<p>The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don’t have the brain of Leslie Lamport.</p>
+The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don't have the brain of Leslie Lamport.
 <p align="right">A Simpler Proof for Paxos and Fast Paxos, by Keith Marzullo, Alessandro Mei and Hein Meling</p>
 <center style="font-size: 2em;">😂</center>
 <a id="more"></a>
@@ -606,10 +594,10 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <p>It is probably a good idea to abandon a proposal if some proposer has begun trying to issue a higher-numbered one. / 在某个议长尝试发起一个序号更大的议案时，废弃已有的议案可能是个不错的想法。</p>
 <p>Therefore, if an acceptor ignores a prepare or accept request because it has already received a prepare request with a higher number, then it should probably inform the proposer, who should then abandon its proposal. This is a performance optimization that does not affect correctness. / 因此，在一位议员因为已经接收到了更大序号的准备请求后，而忽略当前准备或者赞成请求的时候，该议员应该通知相应的议长废弃当前议案。这在不影响正确性的情况下提高了性能。</p>
 <h2 id="learning-a-chosen-value- 了解已通过的值">Learning a Chosen Value / 了解已通过的值</h2>
-<p>To learn that a value has been chosen, a learner must find out that a proposal has been accepted by a majority of acceptors. The obvious algorithm is to have each acceptor, whenever it accepts a proposal, respond to all learners, sending them the proposal. This allows learners to find out about a chosen value as soon as possible, but it requires each acceptor to respond to each learner—a number of responses equal to the product of the number of acceptors and the number of learners. / 为了使听众了解已经被通过的值，听众必须得知道被多数议员赞成的议案的内容。最直观的算法就是，每当议员赞成某个提案时，就通知所有的听众，向他们发送该议案。这样可以保证及时性，但是复杂度太高，达到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>∗</mo><mi>m</mi><mo stretchy="false">)</mo><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">O(n * m)​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mord">​</span></span></span></span> ，这里 n 是议员个数，m 是听众个数。</p>
-<p>The assumption of non-Byzantine failures makes it easy for one learner to find out from another learner that a value has been accepted. We can have the acceptors respond with their acceptances to a distinguished learner, which in turn informs the other learners when a value has been chosen. This approach requires an extra round for all the learners to discover the chosen value. It is also less reliable, since the distinguished learner could fail. But it requires a number of responses equal only to the sum of the number of acceptors and the number of learners. / 回顾前面的非拜占庭假设，我们发现听众可以通过其他听众来准确的了解已被赞成的议案。这样一来，议员就只需要通知某个特定的听众了，剩下的通知工作就可以由听众之间的相互传递来完成。于是，复杂度降低到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">O(n + m)​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mord">​</span></span></span></span> 。但是，这样的话这位特定的听众就成了单点，会导致可靠性下降很多。</p>
+<p>To learn that a value has been chosen, a learner must find out that a proposal has been accepted by a majority of acceptors. The obvious algorithm is to have each acceptor, whenever it accepts a proposal, respond to all learners, sending them the proposal. This allows learners to find out about a chosen value as soon as possible, but it requires each acceptor to respond to each learner—a number of responses equal to the product of the number of acceptors and the number of learners. / 为了使听众了解已经被通过的值，听众必须得知道被多数议员赞成的议案的内容。最直观的算法就是，每当议员赞成某个提案时，就通知所有的听众，向他们发送该议案。这样可以保证及时性，但是复杂度太高，达到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>∗</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n * m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span> ，这里 n 是议员个数，m 是听众个数。</p>
+<p>The assumption of non-Byzantine failures makes it easy for one learner to find out from another learner that a value has been accepted. We can have the acceptors respond with their acceptances to a distinguished learner, which in turn informs the other learners when a value has been chosen. This approach requires an extra round for all the learners to discover the chosen value. It is also less reliable, since the distinguished learner could fail. But it requires a number of responses equal only to the sum of the number of acceptors and the number of learners. / 回顾前面的非拜占庭假设，我们发现听众可以通过其他听众来准确的了解已被赞成的议案。这样一来，议员就只需要通知某个特定的听众了，剩下的通知工作就可以由听众之间的相互传递来完成。于是，复杂度降低到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n + m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span> 。但是，这样的话这位特定的听众就成了单点，会导致可靠性下降很多。</p>
 <blockquote>
-<p>复杂度好像还可以更低，如果听众之间用 P2P 通信，应该可以降到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>m</mi><mo stretchy="false">)</mo><mi mathvariant="normal">​</mi></mrow><annotation encoding="application/x-tex">O(n + log_2 m)​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mord">​</span></span></span></span></p>
+<p>复杂度好像还可以更低，如果听众之间用 P2P 通信，应该可以降到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n + log_2 m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span></p>
 </blockquote>
 <p>More generally, the acceptors could respond with their acceptances to some set of distinguished learners, each of which can then inform all the learners when a value has been chosen. Using a larger set of distinguished learners provides greater reliability at the cost of greater communication complexity. / 介于以上两种策略都有致命的缺陷，一种复杂度太高，另一种可靠性太低，于是我们取两者的折中方案。将第二种方法中的特定听众由一位扩展到一组。以此提高可靠性，但是会以复杂度的提升为代价，需要根据具体场景做权衡。</p>
 <p>Because of message loss, a value could be chosen with no learner ever finding out. The learner could ask the acceptors what proposals they have accepted, but failure of an acceptor could make it impossible to know whether or not a majority had accepted a particular proposal. In that case, learners will find out what value is chosen only when a new proposal is chosen. If a learner needs to know whether a value has been chosen, it can have a proposer issue a proposal, using the algorithm described above. / 由于消息有可能会丢失，那么就可能出现一个值被通过了，却没有任何听众了解。听众可以主动询问议员已经赞成了什么议案，但是在极端情况（多数议员之间只有一个共同议员的情况）下，一位议员失效就将导致无法区分该议案是否获得了多数议员的赞成。在这种情况下，听众只能被动的在新的提案被通过的时候才能了解被多数议员赞成的值。如果听众需要主动获得当先被多数议员通过的值，那么他只能通过发起一次新的议案来达到目的，但这也要求该听众同时也是议长（身兼多职）。</p>
@@ -662,20 +650,6 @@ information even if it fails and then restarts. / 经过上面的优化以后，
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      
-        <div class="popular-posts-date">2018-08-29</div>
-      
-      
-        <div class="popular-posts-img"><img src="/zh/posts/About-Recursion/Recursion-Google.png"></div>
-      
-      <div class="popular-posts-title"><a href="/zh/posts/About-Recursion/" rel="bookmark">浅谈递归</a></div>
-      
-    </li>
-  
-  </ul>
 
         
       
@@ -704,11 +678,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
           
           <div class="post-tags">
             
-              <a href="/zh/tags/总结/" rel="tag"># 总结</a>
-            
-              <a href="/zh/tags/一致性算法/" rel="tag"># 一致性算法</a>
-            
-              <a href="/zh/tags/翻译/" rel="tag"># 翻译</a>
+              <a href="/zh/tags/论文翻译/" rel="tag"># 论文翻译</a>
             
           </div>
         
@@ -781,7 +751,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#paxos-made-simple- 翻译及总结"><span class="nav-number">1.</span> <span class="nav-text">Paxos Made Simple 翻译及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-number">1.1.</span> <span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-number">1.2.</span> <span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-number">1.3.</span> <span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-number">1.3.1.</span> <span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-number">1.3.2.</span> <span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-number">1.3.3.</span> <span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-number">1.3.4.</span> <span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-number">1.4.</span> <span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-number">1.5.</span> <span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-number">1.6.</span> <span class="nav-text">Extension / 拓展</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-number">1.</span> <span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-number">2.</span> <span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-number">3.</span> <span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-number">3.1.</span> <span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-number">3.2.</span> <span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-number">3.3.</span> <span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-number">3.4.</span> <span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-number">4.</span> <span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-number">5.</span> <span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-number">6.</span> <span class="nav-text">Extension / 拓展</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -826,7 +796,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
             <a href="/zh/tags/">
           
         
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

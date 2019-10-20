@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
-<meta name="keywords" content="总结,思考">
+  <meta name="description" content="递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta name="keywords" content="思考,总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
 <meta property="og:url" content="https://bitrhythm.github.io/zh/posts/About-Recursion/index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta property="og:description" content="递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-17T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈递归">
-<meta name="twitter:description" content="浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta name="twitter:description" content="递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
   <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/About-Recursion/">
 
 
@@ -428,8 +428,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="浅谈递归"> 浅谈递归 </h1>
-<p> 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
+        <p> 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
 <p> 用一张图来说明：</p>
 <img title="不过这个递归好像会导致 StackOverflow 😂" data-src="/zh/posts/About-Recursion/Recursion-Google.png">
 <a id="more"></a>
@@ -538,18 +537,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      
-        <div class="popular-posts-date">2018-09-27</div>
-      
-      
-      <div class="popular-posts-title"><a href="/zh/posts/Paxos-Made-Simple-Reading/" rel="bookmark">Paxos Made Simple 翻译及总结</a></div>
-      
-    </li>
-  
-  </ul>
 
         
       
@@ -578,9 +565,9 @@
           
           <div class="post-tags">
             
-              <a href="/zh/tags/总结/" rel="tag"># 总结</a>
-            
               <a href="/zh/tags/思考/" rel="tag"># 思考</a>
+            
+              <a href="/zh/tags/总结/" rel="tag"># 总结</a>
             
           </div>
         
@@ -657,7 +644,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅谈递归"><span class="nav-number">1.</span> <span class="nav-text"> 浅谈递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从与循环的关系看递归"><span class="nav-number">1.1.</span> <span class="nav-text"> 从与循环的关系看递归 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何区分这两种递归"><span class="nav-number">1.2.</span> <span class="nav-text"> 如何区分这两种递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尾递归"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归函数的执行过程"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 递归函数的执行过程 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 观察 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思考"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 思考 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程不单调"><span class="nav-number">1.2.4.1.</span> <span class="nav-text"> 递归调用过程不单调 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程单调"><span class="nav-number">1.2.4.2.</span> <span class="nav-text"> 递归调用过程单调 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#尾递归 -v2"><span class="nav-number">1.2.4.2.1.</span> <span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到常数"><span class="nav-number">1.2.4.2.2.</span> <span class="nav-text"> 用到常数 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到参数"><span class="nav-number">1.2.4.2.3.</span> <span class="nav-text"> 用到参数 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 结论 </span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从与循环的关系看递归"><span class="nav-number">1.</span> <span class="nav-text"> 从与循环的关系看递归 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何区分这两种递归"><span class="nav-number">2.</span> <span class="nav-text"> 如何区分这两种递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尾递归"><span class="nav-number">2.1.</span> <span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归函数的执行过程"><span class="nav-number">2.2.</span> <span class="nav-text"> 递归函数的执行过程 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察"><span class="nav-number">2.3.</span> <span class="nav-text"> 观察 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思考"><span class="nav-number">2.4.</span> <span class="nav-text"> 思考 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程不单调"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 递归调用过程不单调 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程单调"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 递归调用过程单调 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#尾递归 -v2"><span class="nav-number">2.4.2.1.</span> <span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到常数"><span class="nav-number">2.4.2.2.</span> <span class="nav-text"> 用到常数 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到参数"><span class="nav-number">2.4.2.3.</span> <span class="nav-text"> 用到参数 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">2.5.</span> <span class="nav-text"> 结论 </span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -702,7 +689,7 @@
             <a href="/zh/tags/">
           
         
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
