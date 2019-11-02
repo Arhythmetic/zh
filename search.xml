@@ -226,7 +226,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <p>Raft</p>
 <p>Raft is a consensus algorithm that is designed to be easy to understand. It’s equivalent to Paxos in fault-tolerance and performance. The difference is that it’s decomposed into relatively independent subproblems, and it cleanly addresses all major pieces needed for practical systems. / Raft 算法被设计的更容易理解。在容错和性能方面与 Paxos 算法相当。</p>
 <blockquote>
-<p>论文及实现：<a href="https://raft.github.io/" rel="noopener" target="_blank">Raft Consensus Algorithm</a></p>
+<p>论文及实现：<a href="https://raft.github.io/" target="_blank" rel="noopener external nofollow noreferrer">Raft Consensus Algorithm</a></p>
 </blockquote>
 </li>
 </ul>
@@ -244,7 +244,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
     <content><![CDATA[<h1 id="浅谈递归"> 浅谈递归 </h1>
 <p> 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
 <p> 用一张图来说明：</p>
-<img title="不过这个递归好像会导致栈区溢出 😂" data-src="/zh/posts/About-Recursion/Recursion-Google.png">
+<img class title=" 不过这个递归好像会导致栈区溢出 😂" data-src="/zh/posts/About-Recursion/Recursion-Google.png">
 <a id="more"></a>
 <h2 id="从与循环的关系看递归"> 从与循环的关系看递归 </h2>
 <p> 从这个角度看，递归可以分为两种。</p>
@@ -279,9 +279,9 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 </li>
 </ul>
 <p> 以辗转相除算法的递归函数为例，其执行过程如下图所示：</p>
-<img title="辗转相除算法的递归函数执行流程图示" data-src="/zh/posts/About-Recursion/Recursion-Process.svg">
+<img class title=" 辗转相除算法的递归函数执行流程图示 " data-src="/zh/posts/About-Recursion/Recursion-Process.svg">
 <p> 再以二叉树的中序遍历递归函数为例，其递归调用过程如下：</p>
-<img title="二叉树的中序遍历递归函数执行流程图示" data-src="/zh/posts/About-Recursion/Inorder-Traverse.svg">
+<img class title=" 二叉树的中序遍历递归函数执行流程图示 " data-src="/zh/posts/About-Recursion/Inorder-Traverse.svg">
 <h3 id="观察"> 观察 </h3>
 <p> 首先，我们来看辗转相除算法的递归调用过程，可以发现其具备以下特征：</p>
 <ol>
@@ -389,7 +389,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
             <p>Hello World!</p>
           </div>
 <h2 id="图片"> 图片 </h2>
-<img title="San Francisco" data-src="/zh/posts/Hello-World/San-Francisco.png">
+<img class title="San Francisco" data-src="/zh/posts/Hello-World/San-Francisco.png">
 <h2 id="公式"> 公式 </h2>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
 <h2 id="pdf">PDF</h2>
@@ -588,13 +588,13 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础"> 基础 </h3>
 <ul>
 <li>
-<p>Algorithms, <a href="https://www.coursera.org/learn/algorithms-part1" rel="noopener" target="_blank">Part I</a>, <a href="https://www.coursera.org/learn/algorithms-part2" rel="noopener" target="_blank">Part II</a></p>
+<p>Algorithms, <a href="https://www.coursera.org/learn/algorithms-part1" target="_blank" rel="noopener external nofollow noreferrer">Part I</a>, <a href="https://www.coursera.org/learn/algorithms-part2" target="_blank" rel="noopener external nofollow noreferrer">Part II</a></p>
 <p> 导师：Robert Sedgewick、Kevin Wayne</p>
 <p> 机构：Princeton University</p>
 <p> 平台：Coursera</p>
 </li>
 <li>
-<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/" rel="noopener" target="_blank">6.006: Introduction to Algorithms</a></p>
+<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/" target="_blank" rel="noopener external nofollow noreferrer">6.006: Introduction to Algorithms</a></p>
 <p> 导师：Erik Demaine，Srinivas Devadas</p>
 <p> 机构：MIT</p>
 <p> 平台：MIT OpenCourseWare</p>
@@ -603,14 +603,14 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶"> 进阶 </h3>
 <ul>
 <li>
-<p><a href="https://www.coursera.org/learn/analysis-of-algorithms" rel="noopener" target="_blank">Analysis of Algorithms</a></p>
+<p><a href="https://www.coursera.org/learn/analysis-of-algorithms" target="_blank" rel="noopener external nofollow noreferrer">Analysis of Algorithms</a></p>
 <p> 导师：Robert Sedgewick</p>
 <p> 教材：</p>
 <p> 机构：Princeton University</p>
 <p> 平台：Coursera</p>
 </li>
 <li>
-<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/" rel="noopener" target="_blank">6.046J: Design and Analysis of Algorithms</a></p>
+<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/" target="_blank" rel="noopener external nofollow noreferrer">6.046J: Design and Analysis of Algorithms</a></p>
 <p> 导师：Erik Demaine、Srinivas Devadas、Nancy Lynch</p>
 <p> 机构：MIT</p>
 <p> 平台：MIT OpenCourseWare</p>
@@ -620,7 +620,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v2"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://lagunita.stanford.edu/courses/Home/Databases/Engineering/about" rel="noopener" target="_blank">Databases Mini-courses, Introduction to Databases</a></p>
+<p><a href="https://lagunita.stanford.edu/courses/Home/Databases/Engineering/about" target="_blank" rel="noopener external nofollow noreferrer">Databases Mini-courses, Introduction to Databases</a></p>
 <p> 导师：Jennifer Widom</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford Lagunita</p>
@@ -630,7 +630,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v3"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about" rel="noopener" target="_blank">Introduction to Computer Networking</a></p>
+<p><a href="https://lagunita.stanford.edu/courses/Engineering/Networking-SP/SelfPaced/about" target="_blank" rel="noopener external nofollow noreferrer">Introduction to Computer Networking</a></p>
 <p> 导师：Philip Levis、Nick McKeown</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford Lagunita</p>
@@ -640,7 +640,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶 -v2"> 进阶 </h3>
 <ul>
 <li>
-<p><a href="https://pdos.csail.mit.edu/6.828/2018/" rel="noopener" target="_blank">6.828: Operating System Engineering</a></p>
+<p><a href="https://pdos.csail.mit.edu/6.828/2018/" target="_blank" rel="noopener external nofollow noreferrer">6.828: Operating System Engineering</a></p>
 <p> 导师：Adam Belay、Frans Kaashoek</p>
 <p> 机构：MIT</p>
 <p> 平台：MIT</p>
@@ -650,7 +650,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v4"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://www.coursera.org/learn/comparch" rel="noopener" target="_blank">Computer Architecture</a></p>
+<p><a href="https://www.coursera.org/learn/comparch" target="_blank" rel="noopener external nofollow noreferrer">Computer Architecture</a></p>
 <p> 导师：David Wentzlaff</p>
 <p> 机构：Princeton University</p>
 <p> 平台：Coursera</p>
@@ -660,7 +660,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v5"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about" rel="noopener" target="_blank">Compilers</a></p>
+<p><a href="https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about" target="_blank" rel="noopener external nofollow noreferrer">Compilers</a></p>
 <p> 导师：Alex Aiken</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford Lagunita</p>
@@ -670,13 +670,13 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v6"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://www.coursera.org/learn/mathematical-thinking" rel="noopener" target="_blank">Introduction to Mathematical Thinking</a></p>
+<p><a href="https://www.coursera.org/learn/mathematical-thinking" target="_blank" rel="noopener external nofollow noreferrer">Introduction to Mathematical Thinking</a></p>
 <p> 导师：Keith Devlin</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Coursera</p>
 </li>
 <li>
-<p><a href="https://www.coursera.org/learn/logic-introduction" rel="noopener" target="_blank">Introduction to Logic</a></p>
+<p><a href="https://www.coursera.org/learn/logic-introduction" target="_blank" rel="noopener external nofollow noreferrer">Introduction to Logic</a></p>
 <p> 导师：Michael Genesereth</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Coursera</p>
@@ -685,7 +685,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶 -v3"> 进阶 </h3>
 <ul>
 <li>
-<p><a href="https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about" rel="noopener" target="_blank">Convex Optimization</a></p>
+<p><a href="https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about" target="_blank" rel="noopener external nofollow noreferrer">Convex Optimization</a></p>
 <p> 导师：Stephen Boyd、Henryk Blasinski、Neal Parikh、Ernest Ryu、Madeleine Udell</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford Lagunita</p>
@@ -695,7 +695,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶 -v4"> 进阶 </h3>
 <ul>
 <li>
-<p><a href="https://pdos.csail.mit.edu/6.824/" rel="noopener" target="_blank">6.824: Distributed Systems</a></p>
+<p><a href="https://pdos.csail.mit.edu/6.824/" target="_blank" rel="noopener external nofollow noreferrer">6.824: Distributed Systems</a></p>
 <p> 导师：Robert Morris、Malte Schwarzkopf</p>
 <p> 机构：MIT</p>
 <p> 平台：MIT</p>
@@ -705,19 +705,19 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v7"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://www.coursera.org/learn/machine-learning" rel="noopener" target="_blank">Machine Learning</a></p>
+<p><a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener external nofollow noreferrer">Machine Learning</a></p>
 <p> 导师：Andrew Ng</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Coursera</p>
 </li>
 <li>
-<p><a href="https://www.coursera.org/specializations/deep-learning" rel="noopener" target="_blank">Deep Learning Specialization</a></p>
+<p><a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="noopener external nofollow noreferrer">Deep Learning Specialization</a></p>
 <p> 导师：Andrew Ng</p>
-<p> 机构：<a href="http://deeplearning.ai" rel="noopener" target="_blank">deeplearning.ai</a></p>
+<p> 机构：<a href="http://deeplearning.ai" target="_blank" rel="noopener external nofollow noreferrer">deeplearning.ai</a></p>
 <p> 平台：Coursera</p>
 </li>
 <li>
-<p><a href="https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/about" rel="noopener" target="_blank">Statistical Learning</a></p>
+<p><a href="https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/about" target="_blank" rel="noopener external nofollow noreferrer">Statistical Learning</a></p>
 <p> 导师：Trevor Hastie、Rob Tibshirani</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford Lagunita</p>
@@ -726,19 +726,19 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶 -v5"> 进阶 </h3>
 <ul>
 <li>
-<p><a href="http://cs231n.stanford.edu/2017/" rel="noopener" target="_blank">CS231n: Convolutional Neural Networks for Visual Recognition</a>, <a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" rel="noopener" target="_blank"> 课程视频 </a></p>
+<p><a href="http://cs231n.stanford.edu/2017/" target="_blank" rel="noopener external nofollow noreferrer">CS231n: Convolutional Neural Networks for Visual Recognition</a>, <a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener external nofollow noreferrer"> 课程视频 </a></p>
 <p> 导师：Fei-Fei Li、Justin Johnson、Serena Yeung</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford University</p>
 </li>
 <li>
-<p><a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1162/" rel="noopener" target="_blank">CS224n: Natural Language Processing</a>, <a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6" rel="noopener" target="_blank"> 课程视频 </a></p>
+<p><a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1162/" target="_blank" rel="noopener external nofollow noreferrer">CS224n: Natural Language Processing</a>, <a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6" target="_blank" rel="noopener external nofollow noreferrer"> 课程视频 </a></p>
 <p> 导师：Chris Manning</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Stanford University</p>
 </li>
 <li>
-<p><a href="http://rail.eecs.berkeley.edu/deeprlcourse/" rel="noopener" target="_blank">CS 294-112 Deep Reinforcement Learning</a></p>
+<p><a href="http://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank" rel="noopener external nofollow noreferrer">CS 294-112 Deep Reinforcement Learning</a></p>
 <p> 导师：Sergey Levine</p>
 <p> 机构：UC Berkeley</p>
 <p> 平台：UC Berkeley</p>
@@ -748,7 +748,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v8"> 基础 </h3>
 <ul>
 <li>
-<p>Cryptography, <a href="https://www.coursera.org/learn/crypto" rel="noopener" target="_blank">I</a>, <a href="https://www.coursera.org/learn/crypto2" rel="noopener" target="_blank">II</a></p>
+<p>Cryptography, <a href="https://www.coursera.org/learn/crypto" target="_blank" rel="noopener external nofollow noreferrer">I</a>, <a href="https://www.coursera.org/learn/crypto2" target="_blank" rel="noopener external nofollow noreferrer">II</a></p>
 <p> 导师：Dan Boneh</p>
 <p> 机构：Stanford University</p>
 <p> 平台：Coursera</p>
@@ -758,7 +758,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v9"> 基础 </h3>
 <ul>
 <li>
-<p>Game Theory, <a href="https://www.coursera.org/learn/game-theory-1" rel="noopener" target="_blank">I</a>, <a href="https://www.coursera.org/learn/game-theory-2" rel="noopener" target="_blank">II</a></p>
+<p>Game Theory, <a href="https://www.coursera.org/learn/game-theory-1" target="_blank" rel="noopener external nofollow noreferrer">I</a>, <a href="https://www.coursera.org/learn/game-theory-2" target="_blank" rel="noopener external nofollow noreferrer">II</a></p>
 <p> 导师：Matthew O. Jackson、Kevin Leyton-Brown、Yoav Shoham</p>
 <p> 机构：Stanford University、The University of British Columbia</p>
 <p> 平台：Coursera</p>
@@ -768,7 +768,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="基础 -v10"> 基础 </h3>
 <ul>
 <li>
-<p><a href="https://www.coursera.org/learn/unix" rel="noopener" target="_blank">The Unix Workbench</a></p>
+<p><a href="https://www.coursera.org/learn/unix" target="_blank" rel="noopener external nofollow noreferrer">The Unix Workbench</a></p>
 <p> 导师：Sean Kross、Jeff Leek、Brian Caffo、Roger D. Peng</p>
 <p> 机构：Johns Hopkins University</p>
 <p> 平台：Coursera</p>
@@ -777,7 +777,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <h3 id="进阶 -v6"> 进阶 </h3>
 <ul>
 <li>
-<p>Programming Languages, <a href="https://www.coursera.org/learn/programming-languages" rel="noopener" target="_blank">A</a>, <a href="https://www.coursera.org/learn/programming-languages-part-b" rel="noopener" target="_blank">B</a>, <a href="https://www.coursera.org/learn/programming-languages-part-c" rel="noopener" target="_blank">C</a></p>
+<p>Programming Languages, <a href="https://www.coursera.org/learn/programming-languages" target="_blank" rel="noopener external nofollow noreferrer">A</a>, <a href="https://www.coursera.org/learn/programming-languages-part-b" target="_blank" rel="noopener external nofollow noreferrer">B</a>, <a href="https://www.coursera.org/learn/programming-languages-part-c" target="_blank" rel="noopener external nofollow noreferrer">C</a></p>
 <p> 导师：Dan Grossman</p>
 <p> 机构：University of Washington</p>
 <p> 平台：Coursera</p>

@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#E91E63">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png?v=7.4.2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png?v=7.4.2">
-  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png?v=7.4.2">
-  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg?v=7.4.2" color="#E91E63">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png">
+  <link rel="mask-icon" href="/zh/images/logo-lightbulb.svg" color="#E91E63">
 
-<link rel="stylesheet" href="/zh/css/main.css?v=7.4.2">
+<link rel="stylesheet" href="/zh/css/main.css">
 
 
-<link rel="stylesheet" href="/zh/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="/zh/lib/font-awesome/css/font-awesome.min.css">
 
 
 <script id="hexo-configurations">
@@ -26,12 +21,12 @@
   var CONFIG = {
     root: '/zh/',
     scheme: 'Pisces',
-    version: '7.4.2',
+    version: '7.5.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":true,"show_result":false,"style":"flat"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
-    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    bookmark: {"enable":true,"color":"#222222","save":"auto"},
     fancybox: false,
     mediumzoom: true,
     lazyload: true,
@@ -55,19 +50,18 @@
   };
 </script>
 
-  <meta name="description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
+  <meta name="description" content="Paxos Made Simple 翻译及总结 Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
 <meta name="keywords" content="论文翻译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paxos Made Simple 翻译及总结">
-<meta property="og:url" content="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;Paxos-Made-Simple-Reading&#x2F;index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
+<meta property="og:description" content="Paxos Made Simple 翻译及总结 Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-29T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Paxos Made Simple 翻译及总结">
-<meta name="twitter:description" content="Paxos Made Simple 翻译及总结 Warm-up / 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
-  <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
+
+<link rel="canonical" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
 
 
 <script id="page-configurations">
@@ -83,8 +77,6 @@
 
   <title>Paxos Made Simple 翻译及总结 | 学习与探索</title>
   
-
-
 
 
 
@@ -148,116 +140,50 @@
 <nav class="site-nav">
   
   <ul id="menu" class="menu">
-      
-      
-        
-        
         <li class="menu-item menu-item-home">
-      
-    
 
     <a href="/zh/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-courses">
-      
-    
 
     <a href="/zh/courses/" rel="section"><i class="fa fa-fw fa-university"></i>课程</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-books">
-      
-    
 
     <a href="/zh/books/" rel="section"><i class="fa fa-fw fa-book"></i>书籍</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-papers">
-      
-    
 
     <a href="/zh/papers/" rel="section"><i class="fa fa-fw fa-paper-plane"></i>论文</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-about">
-      
-    
 
     <a href="/zh/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-categories">
-      
-    
 
     <a href="/zh/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
     <a href="/zh/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
-      
-    
-      
-      
-        
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
     <a href="/zh/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
-      
-    
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger">
-          <i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
       </li>
-    
   </ul>
 
 </nav>
@@ -295,7 +221,7 @@
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
           <div class="content">
             
@@ -308,9 +234,9 @@
     <link itemprop="mainEntityOfPage" href="https://bitrhythm.github.io/zh/zh/posts/Paxos-Made-Simple-Reading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/zh/images/avatar-ada.png">
       <meta itemprop="name" content="何佳林">
       <meta itemprop="description" content="不变初心，特立独行。">
-      <meta itemprop="image" content="/zh/images/avatar-ada.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -318,11 +244,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            Paxos Made Simple 翻译及总结
-            <a href="https://github.com/Bitrhythm/Blogs/blob/master/zh/source/_posts/Paxos-Made-Simple-Reading.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pencil"></i></a>
-
-          
+          Paxos Made Simple 翻译及总结<a href="https://github.com/Bitrhythm/Blogs/blob/master/zh/source/_posts/Paxos-Made-Simple-Reading.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pencil"></i></a>
         </h2>
 
         <div class="post-meta">
@@ -332,16 +254,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2018-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-27T00:00:00+08:00">2018-09-27</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -349,25 +263,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2018-09-30 00:00:00" itemprop="dateModified" datetime="2018-09-30T00:00:00+08:00">2018-09-30</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/分布式系统/" itemprop="url" rel="index">
+                  <a href="/zh/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index">
                     <span itemprop="name">分布式系统</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
   
@@ -376,8 +282,6 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
     <a title="disqus" href="/zh/posts/Paxos-Made-Simple-Reading/#comments" itemprop="discussionUrl">
@@ -385,28 +289,21 @@
     </a>
   </span>
   
-  
-          <br>
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
-              
                 <span class="post-meta-item-text">本文字数：</span>
-              
               <span>19k</span>
             </span>
-          
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
-              
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
               <span>31 分钟</span>
             </span>
-          
 
         </div>
       </header>
@@ -640,7 +537,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <p>Raft</p>
 <p>Raft is a consensus algorithm that is designed to be easy to understand. It’s equivalent to Paxos in fault-tolerance and performance. The difference is that it’s decomposed into relatively independent subproblems, and it cleanly addresses all major pieces needed for practical systems. / Raft 算法被设计的更容易理解。在容错和性能方面与 Paxos 算法相当。</p>
 <blockquote>
-<p>论文及实现：<a href="https://raft.github.io/" rel="noopener external nofollow noreferrer" target="_blank">Raft Consensus Algorithm</a></p>
+<p>论文及实现：<a href="https://raft.github.io/" target="_blank" rel="noopener external nofollow noreferrer">Raft Consensus Algorithm</a></p>
 </blockquote>
 </li>
 </ul>
@@ -652,8 +549,6 @@ information even if it fails and then restarts. / 经过上面的优化以后，
     
       
 
-        
-      
         
 
 <div>
@@ -671,37 +566,26 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 </ul>
 </div>
 
-      
 
       <footer class="post-footer">
-          
-            
-          
           <div class="post-tags">
-            
-              <a href="/zh/tags/论文翻译/" rel="tag"># 论文翻译</a>
-            
+              <a href="/zh/tags/%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91/" rel="tag"># 论文翻译</a>
           </div>
-        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-              
                 <a href="/zh/posts/About-Recursion/" rel="next" title="浅谈递归">
                   <i class="fa fa-chevron-left"></i> 浅谈递归
                 </a>
-              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
             </div>
           </div>
-        
       </footer>
     
   </article>
@@ -715,13 +599,11 @@ information even if it fails and then restarts. / 经过上面的优化以后，
           </div>
           
     
-    
   <div class="comments" id="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
-  
   
 
         </div>
@@ -735,11 +617,6 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -753,80 +630,48 @@ information even if it fails and then restarts. / 经过上面的优化以后，
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#paxos-made-simple- 翻译及总结"><span class="nav-text">Paxos Made Simple 翻译及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-text">Extension / 拓展</span></a></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/zh/images/avatar-ada.png"
-      alt="何佳林">
+  <img class="site-author-image" itemprop="image" alt="何佳林"
+    src="/zh/images/avatar-ada.png">
   <p class="site-author-name" itemprop="name">何佳林</p>
   <div class="site-description" itemprop="description">不变初心，特立独行。</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/zh/archives/">
         
           <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-categories">
-        
-          
             <a href="/zh/categories/">
           
-        
-        <span class="site-state-item-count">13</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/zh/tags/">
           
-        
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="mailto:xprtion@outlook.com" title="Email &rarr; mailto:xprtion@outlook.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+        <a href="mailto:xprtion@outlook.com" title="Email &amp;rarr; mailto:xprtion@outlook.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
       </span>
-    
       <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://github.com/Bitrhythm" title="GitHub &rarr; https://github.com/Bitrhythm" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+        <a href="https://github.com/Bitrhythm" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;Bitrhythm" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i></a>
       </span>
-    
   </div>
   <div class="cc-license motion-element" itemprop="license">
-    
-  
     <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="/zh/images/cc-by-sa.svg" alt="Creative Commons"></a>
   </div>
 
@@ -837,7 +682,6 @@ information even if it fails and then restarts. / 经过上面的优化以后，
           <i class="fa fa-arrow-up"></i>
           <span>0%</span>
         </div>
-      
 
     </div>
   </aside>
@@ -852,6 +696,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
         
 
 <div class="copyright">
+  
   &copy; 2018 – 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
@@ -859,12 +704,10 @@ information even if it fails and then restarts. / 经过上面的优化以后，
   </span>
   <span class="author" itemprop="copyrightHolder">何佳林</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">
-      
-    主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a>
   </div>
 
         
@@ -887,15 +730,15 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
   
   <script size="128" alpha="1" zIndex="-1" src="/zh/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  <script src="/zh/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/zh/lib/pjax/pjax.min.js?v=0.2.8"></script>
+  <script src="/zh/lib/anime.min.js"></script>
+  <script src="/zh/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/zh/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/zh/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/zh/js/utils.js?v=7.4.2"></script><script src="/zh/js/motion.js?v=7.4.2"></script>
-<script src="/zh/js/schemes/pisces.js?v=7.4.2"></script>
-<script src="/zh/js/next-boot.js?v=7.4.2"></script><script src="/zh/js/bookmark.js?v=7.4.2"></script>
+  <script src="/zh/lib/velocity/velocity.min.js"></script>
+  <script src="/zh/lib/velocity/velocity.ui.min.js"></script>
+<script src="/zh/js/utils.js"></script><script src="/zh/js/motion.js"></script>
+<script src="/zh/js/schemes/pisces.js"></script>
+<script src="/zh/js/next-boot.js"></script><script src="/zh/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -961,11 +804,7 @@ window.addEventListener('pjax:success', () => {
 
 
 
-
-
-
-
-  <script src="/zh/js/local-search.js?v=7.4.2"></script>
+  <script src="/zh/js/local-search.js"></script>
 
 
 
@@ -997,22 +836,16 @@ if (document.querySelectorAll('div.pdf').length) {
 
 
 
-
     <div id="pjax">
 
   
 
   
-    
       
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
   <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
-    
-  
-
-  
 
   
 
@@ -1027,16 +860,16 @@ if (document.querySelectorAll('div.pdf').length) {
   window.addEventListener('load', loadCount, false);
 </script>
 <script>
-  function disqus_config() {
-    this.page.url = "https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/";
-    this.page.identifier = "posts/Paxos-Made-Simple-Reading/";
-    this.page.title = 'Paxos Made Simple 翻译及总结';
-  }
   function loadComments() {
     if (window.DISQUS) {
       DISQUS.reset({
         reload: true,
-        config: disqus_config
+        config: {page: {
+            url: "https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/",
+            identifier: "posts/Paxos-Made-Simple-Reading/",
+            title: "Paxos Made Simple 翻译及总结"
+          }
+        }
       });
     } else {
       var d = document, s = d.createElement('script');

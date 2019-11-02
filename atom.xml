@@ -55,7 +55,7 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
       &lt;h1 id=&quot;浅谈递归&quot;&gt;浅谈递归&lt;/h1&gt;
 &lt;p&gt;递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。&lt;/p&gt;
 &lt;p&gt;用一张图来说明：&lt;/p&gt;
-&lt;img src=&quot;/zh/posts/About-Recursion/Recursion-Google.png&quot; title=&quot;不过这个递归好像会导致栈区溢出 😂&quot;&gt;
+&lt;img src=&quot;/zh/posts/About-Recursion/Recursion-Google.png&quot; class=&quot;&quot; title=&quot;不过这个递归好像会导致栈区溢出 😂&quot;&gt;
     
     </summary>
     
