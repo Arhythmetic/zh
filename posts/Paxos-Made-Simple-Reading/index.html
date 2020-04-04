@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#E91E63">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 4.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png">
@@ -15,45 +15,22 @@
 
 <link rel="stylesheet" href="/zh/lib/font-awesome/css/font-awesome.min.css">
 
-
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://bitrhythm.github.io/zh').hostname,
-    root: '/zh/',
-    scheme: 'Pisces',
-    version: '7.6.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":false,"style":"flat"},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
-    bookmark: {"enable":true,"color":"#222222","save":"auto"},
-    fancybox: false,
-    mediumzoom: true,
-    lazyload: true,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},
-    path: 'search.xml',
-    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bitrhythm.github.io","root":"/zh/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="Paxos Made Simple 翻译及总结 Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
-<meta name="keywords" content="论文翻译">
+  <meta name="description" content="¶Paxos Made Simple 翻译及总结 ¶Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Engl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paxos Made Simple 翻译及总结">
-<meta property="og:url" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;Paxos-Made-Simple-Reading&#x2F;index.html">
+<meta property="og:url" content="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="Paxos Made Simple 翻译及总结 Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Englis">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-29T16:00:00.000Z">
+<meta property="og:description" content="¶Paxos Made Simple 翻译及总结 ¶Warm-up &#x2F; 预热 The Paxos algorithm, when presented in plain English, is very simple. Paxos Made Simple, by Leslie Lamport The Fast Paxos algorithm, when presented in plain Engl">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-09-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2018-09-29T16:00:00.000Z">
+<meta property="article:author" content="何佳林">
+<meta property="article:tag" content="论文翻译">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
@@ -63,10 +40,9 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -110,19 +86,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/zh/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">学习与探索</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <h1 class="site-subtitle" itemprop="description">计算机，自行车，还有音乐</h1>
-      
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
@@ -130,11 +93,28 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/zh/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">学习与探索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">计算机，自行车，还有音乐</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
@@ -181,29 +161,34 @@
         </a>
       </li>
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -219,14 +204,13 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content post posts-expand">
             
 
-  <div class="posts-expand">
-      
+    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -239,9 +223,9 @@
       <meta itemprop="name" content="学习与探索">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           Paxos Made Simple 翻译及总结<a href="https://github.com/Bitrhythm/Blogs/blob/master/zh/source/_posts/Paxos-Made-Simple-Reading.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pencil"></i></a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -265,9 +249,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index">
-                    <span itemprop="name">分布式系统</span>
-                  </a>
+                  <a href="/zh/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">分布式系统</span></a>
                 </span>
             </span>
 
@@ -280,7 +262,7 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/zh/posts/Paxos-Made-Simple-Reading/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/zh/posts/Paxos-Made-Simple-Reading/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="posts/Paxos-Made-Simple-Reading/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -298,7 +280,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>31 分钟</span>
+              <span>17 分钟</span>
             </span>
 
         </div>
@@ -310,15 +292,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="paxos-made-simple- 翻译及总结">Paxos Made Simple 翻译及总结</h1>
-<h2 id="warm-up- 预热">Warm-up / 预热</h2>
+        <h1 id="Paxos-Made-Simple- 翻译及总结"><a class="header-anchor" href="#Paxos-Made-Simple- 翻译及总结">¶</a>Paxos Made Simple 翻译及总结</h1>
+<h2 id="Warm-up- 预热"><a class="header-anchor" href="#Warm-up- 预热">¶</a>Warm-up / 预热</h2>
 <p>The Paxos algorithm, when presented in plain English, is very simple.</p>
 <p align="right">Paxos Made Simple, by Leslie Lamport</p>
 The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don't have the brain of Leslie Lamport.
 <p align="right">A Simpler Proof for Paxos and Fast Paxos, by Keith Marzullo, Alessandro Mei and Hein Meling</p>
 <center style="font-size: 2em;">😂</center>
 <a id="more"></a>
-<h2 id="the-problem- 问题">The Problem / 问题</h2>
+<h2 id="The-Problem- 问题"><a class="header-anchor" href="#The-Problem- 问题">¶</a>The Problem / 问题</h2>
 <ul>
 <li>
 <p>Safety requirements for consensus / 一致性算法的基本要求:</p>
@@ -353,16 +335,16 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
 </ul>
 </li>
 </ul>
-<h2 id="choosing-a-value- 值的通过">Choosing a Value / 值的通过</h2>
-<h3 id="single-acceptor-agent- 单个议员">Single acceptor agent / 单个议员</h3>
+<h2 id="Choosing-a-Value- 值的通过"><a class="header-anchor" href="#Choosing-a-Value- 值的通过">¶</a>Choosing a Value / 值的通过</h2>
+<h3 id="Single-acceptor-agent- 单个议员"><a class="header-anchor" href="#Single-acceptor-agent- 单个议员">¶</a>Single acceptor agent / 单个议员</h3>
 <p>A proposer sends a proposal to the acceptor, who chooses the first proposed value that it receives. / 议长向议员发送一份议案，议员通过最开始接收到的议案。</p>
 <blockquote>
 <p>Simple but unsatisfactory, because the failure of the acceptor makes any further progress impossible. / 简单但是还不够好，因为议员一旦失效，整个系统也随之失效。</p>
 </blockquote>
-<h3 id="multiple-acceptor-agents- 多个议员">Multiple acceptor agents / 多个议员</h3>
+<h3 id="Multiple-acceptor-agents- 多个议员"><a class="header-anchor" href="#Multiple-acceptor-agents- 多个议员">¶</a>Multiple acceptor agents / 多个议员</h3>
 <p>A proposer sends a proposed value to a set of acceptors. An acceptor may accept the proposed value. The value is chosen when a large enough set of acceptors have accepted it. How large is large enough? To ensure that only a single value is chosen, we can let a large enough set consist of any majority of the agents. Because any two majorities have at least one acceptor in common, this works if an acceptor can accept at most one value. / 一个议长将一份议案发送给一组议员。一个议员可能赞成该议案，也可能不赞成。当足够多的议员赞成了该议案，那么该议案就将通过。具体要多少议员赞成才是足够多？为了保证只有单个议案被通过，我们必须保证这一组议员包含全体议员中的多数议员 *，因为任何两组多数议员至少会包含一位共有议员，如果一位议员只能赞成一个提案的话，那么就能保证只有单个议案被通过。</p>
 <blockquote>
-<p><em>Majority / <em>多数: Majority means that a set is consisted of more than half of all acceptors / 多数表示这一组议员由全体议员的 </em></em> 一半以上 ** 的议员组成。</p>
+<p>*Majority / * 多数: Majority means that a set is consisted of more than half of all acceptors / 多数表示这一组议员由全体议员的 <strong> 一半以上 </strong> 的议员组成。</p>
 </blockquote>
 <p>In the absence of failure or message loss, we want a value to be chosen even if only one value is proposed by a single proposer. / 在没有失效和信息丢失的情况下，如果只有一位议长，并且只提了一份议案，那么这个议案就应该被通过（否则系统将不能正常运行下去）。</p>
 <ul>
@@ -435,7 +417,7 @@ to a prepare request having a number greater than n. / 当且仅当一位议员�
 <p>With this optimization, an acceptor needs to remember only the highest-numbered proposal that it has ever accepted and the number of the highest-numbered prepare request to which it has responded. Because P2c must be kept invariant regardless of failures, an acceptor must remember this<br>
 information even if it fails and then restarts. / 经过上面的优化以后，议员只需要保存他赞成过的议案中序号最大的那一份和响应过得准备请求中序号最大的那一个就行。因为即使在有失效的情况下我们也必须维护约束 P2c 的不变性，议员就算经历失效或者重启也必须保存上面的信息。</p>
 <p>Note that the proposer can always abandon a proposal and forget all about it—as long as it never tries to issue another proposal with the same number. / 值得注意的是，议长总是可以通过不再发起相同序号的新议案的方式来放弃并且遗忘调一份议案。</p>
-<h3 id="conclude- 总结">Conclude / 总结</h3>
+<h3 id="Conclude- 总结"><a class="header-anchor" href="#Conclude- 总结">¶</a>Conclude / 总结</h3>
 <p>Requirements for the algorithm / 算法的约束:</p>
 <ul>
 <li>1 / 约束 1: <strong>Only a value that has been proposed may be chosen / 只能通过已经被提出的值</strong></li>
@@ -465,7 +447,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 </blockquote>
 </li>
 </ul>
-<h3 id="the-algorithm- 算法">The Algorithm / 算法</h3>
+<h3 id="The-Algorithm- 算法"><a class="header-anchor" href="#The-Algorithm- 算法">¶</a>The Algorithm / 算法</h3>
 <p>Putting the actions of the proposer and acceptor together, we see that the algorithm operates in the following two phases. / 将上面的过程整合在一起，我们就得到了最终的算法（通过值部分）:</p>
 <ul>
 <li>
@@ -487,7 +469,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <p>It can abandon a proposal in the middle of the protocol at any time. (Correctness is maintained, even though requests and/or responses for the proposal may arrive at their destinations long after the proposal was abandoned.) / 议长可以在任何时候中途废弃议案。（尽管请求或者响应可能在到达目的地之前就已经被废弃，但正确性依然不会受到影响。）</p>
 <p>It is probably a good idea to abandon a proposal if some proposer has begun trying to issue a higher-numbered one. / 在某个议长尝试发起一个序号更大的议案时，废弃已有的议案可能是个不错的想法。</p>
 <p>Therefore, if an acceptor ignores a prepare or accept request because it has already received a prepare request with a higher number, then it should probably inform the proposer, who should then abandon its proposal. This is a performance optimization that does not affect correctness. / 因此，在一位议员因为已经接收到了更大序号的准备请求后，而忽略当前准备或者赞成请求的时候，该议员应该通知相应的议长废弃当前议案。这在不影响正确性的情况下提高了性能。</p>
-<h2 id="learning-a-chosen-value- 了解已通过的值">Learning a Chosen Value / 了解已通过的值</h2>
+<h2 id="Learning-a-Chosen-Value- 了解已通过的值"><a class="header-anchor" href="#Learning-a-Chosen-Value- 了解已通过的值">¶</a>Learning a Chosen Value / 了解已通过的值</h2>
 <p>To learn that a value has been chosen, a learner must find out that a proposal has been accepted by a majority of acceptors. The obvious algorithm is to have each acceptor, whenever it accepts a proposal, respond to all learners, sending them the proposal. This allows learners to find out about a chosen value as soon as possible, but it requires each acceptor to respond to each learner—a number of responses equal to the product of the number of acceptors and the number of learners. / 为了使听众了解已经被通过的值，听众必须得知道被多数议员赞成的议案的内容。最直观的算法就是，每当议员赞成某个提案时，就通知所有的听众，向他们发送该议案。这样可以保证及时性，但是复杂度太高，达到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>∗</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n * m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span> ，这里 n 是议员个数，m 是听众个数。</p>
 <p>The assumption of non-Byzantine failures makes it easy for one learner to find out from another learner that a value has been accepted. We can have the acceptors respond with their acceptances to a distinguished learner, which in turn informs the other learners when a value has been chosen. This approach requires an extra round for all the learners to discover the chosen value. It is also less reliable, since the distinguished learner could fail. But it requires a number of responses equal only to the sum of the number of acceptors and the number of learners. / 回顾前面的非拜占庭假设，我们发现听众可以通过其他听众来准确的了解已被赞成的议案。这样一来，议员就只需要通知某个特定的听众了，剩下的通知工作就可以由听众之间的相互传递来完成。于是，复杂度降低到了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n + m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span> 。但是，这样的话这位特定的听众就成了单点，会导致可靠性下降很多。</p>
 <blockquote>
@@ -495,7 +477,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 </blockquote>
 <p>More generally, the acceptors could respond with their acceptances to some set of distinguished learners, each of which can then inform all the learners when a value has been chosen. Using a larger set of distinguished learners provides greater reliability at the cost of greater communication complexity. / 介于以上两种策略都有致命的缺陷，一种复杂度太高，另一种可靠性太低，于是我们取两者的折中方案。将第二种方法中的特定听众由一位扩展到一组。以此提高可靠性，但是会以复杂度的提升为代价，需要根据具体场景做权衡。</p>
 <p>Because of message loss, a value could be chosen with no learner ever finding out. The learner could ask the acceptors what proposals they have accepted, but failure of an acceptor could make it impossible to know whether or not a majority had accepted a particular proposal. In that case, learners will find out what value is chosen only when a new proposal is chosen. If a learner needs to know whether a value has been chosen, it can have a proposer issue a proposal, using the algorithm described above. / 由于消息有可能会丢失，那么就可能出现一个值被通过了，却没有任何听众了解。听众可以主动询问议员已经赞成了什么议案，但是在极端情况（多数议员之间只有一个共同议员的情况）下，一位议员失效就将导致无法区分该议案是否获得了多数议员的赞成。在这种情况下，听众只能被动的在新的提案被通过的时候才能了解被多数议员赞成的值。如果听众需要主动获得当先被多数议员通过的值，那么他只能通过发起一次新的议案来达到目的，但这也要求该听众同时也是议长（身兼多职）。</p>
-<h2 id="the-progress- 过程">The Progress / 过程</h2>
+<h2 id="The-Progress- 过程"><a class="header-anchor" href="#The-Progress- 过程">¶</a>The Progress / 过程</h2>
 <p>It’s easy to construct a scenario in which two proposers each keep issuing a sequence of proposals with increasing numbers, none of which are ever chosen. Proposer p completes phase 1 for a proposal number n1. Another proposer q then completes phase 1 for a proposal number n2 &gt; n1. Proposer p’s phase 2 accept requests for a proposal numbered n1 are ignored because the acceptors have all promised not to accept any new proposal numbered less than n2. So, proposer p then begins and completes phase 1 for a new proposal number n3 &gt; n2, causing the second phase 2 accept requests of proposer q to be ignored. And so on. / 即使对于上面的算法，仍然可以轻易的构造出两位议长交替发起序号更大的议案，但却无法最终确定的情况，称之为活锁。例如：议长 p 完成了序号为 n1 的阶段 1。另一位议长 q 然后完成了序号 n2 的阶段 1，并且 n2 &gt; n1。议长 p 的阶段 2 的赞成请求会由于议员响应了 议长 q 的 n2 的准备请求（保证不再赞成任何序号小于 n2 的议案）而被忽略。这样，议长 p 就会发起序号为 n3 的阶段 1，且 n3 &gt; n2，于是议长 q 的 序号为 n2 的议案的阶段 2 又会由于议员响应了 议长 p 的 n3 的准备请求（保证不再赞成任何序号小于 n3 的议案）而被忽略，以此循环往复，无休无止。</p>
 <p>To guarantee progress, a distinguished proposer must be selected as the only one to try issuing proposals. If the distinguished proposer can communicate successfully with a majority of acceptors, and if it uses a proposal with number greater than any already used, then it will succeed in issuing a proposal that is accepted. By abandoning a proposal and trying again if it learns about some request with a higher proposal number, the distinguished proposer will eventually choose a high enough proposal number.  / 为了保证流程的正常进行，避免活锁的情况，系统中必须只能有一位议长，并且作为唯一的议案发起者，当该议长能够正常的和多数议员通信并且使用大于任何已有议案的序号的议案序号，那么就能保证发起的议案被正常赞成。当该议长了解更大的序号时，废弃当前议案，并发起一份序号更大的议案，以此往复，最终就能发起一份序号足够大的议案，并获得赞成。</p>
 <blockquote>
@@ -505,7 +487,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 <p>值得注意的是，为了避免活锁，算法现在只允许集群中有一位议长，而不是最开始的多位议长了，并且增加了议长选举机制（可能是从议员或者听众之间选举，也可能是其他角色）。</p>
 </blockquote>
 <p>If enough of the system (proposer, acceptors, and communication network) is working properly, liveness can therefore be achieved by electing a single distinguished proposer. / 如果有足够多的系统（单个议长，多位议员，以及通信网络）正常运行，集群的健康度就能通过议长的选举来保证。</p>
-<h2 id="extension- 拓展">Extension / 拓展</h2>
+<h2 id="Extension- 拓展"><a class="header-anchor" href="#Extension- 拓展">¶</a>Extension / 拓展</h2>
 <ul>
 <li>
 <p>The Part-Time Parliament</p>
@@ -586,18 +568,39 @@ information even if it fails and then restarts. / 经过上面的优化以后，
   
   
 
-  </div>
 
 
           </div>
           
     
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -622,7 +625,7 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#paxos-made-simple- 翻译及总结"><span class="nav-text">Paxos Made Simple 翻译及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#warm-up- 预热"><span class="nav-text">Warm-up / 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-problem- 问题"><span class="nav-text">The Problem / 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#choosing-a-value- 值的通过"><span class="nav-text">Choosing a Value / 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#single-acceptor-agent- 单个议员"><span class="nav-text">Single acceptor agent / 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiple-acceptor-agents- 多个议员"><span class="nav-text">Multiple acceptor agents / 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclude- 总结"><span class="nav-text">Conclude / 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-algorithm- 算法"><span class="nav-text">The Algorithm / 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-a-chosen-value- 了解已通过的值"><span class="nav-text">Learning a Chosen Value / 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-progress- 过程"><span class="nav-text">The Progress / 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extension- 拓展"><span class="nav-text">Extension / 拓展</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Paxos-Made-Simple- 翻译及总结"><span class="nav-text">Paxos Made Simple 翻译及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Warm-up- 预热"><span class="nav-text">Warm-up &#x2F; 预热</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Problem- 问题"><span class="nav-text">The Problem &#x2F; 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choosing-a-Value- 值的通过"><span class="nav-text">Choosing a Value &#x2F; 值的通过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Single-acceptor-agent- 单个议员"><span class="nav-text">Single acceptor agent &#x2F; 单个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-acceptor-agents- 多个议员"><span class="nav-text">Multiple acceptor agents &#x2F; 多个议员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclude- 总结"><span class="nav-text">Conclude &#x2F; 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Algorithm- 算法"><span class="nav-text">The Algorithm &#x2F; 算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-a-Chosen-Value- 了解已通过的值"><span class="nav-text">Learning a Chosen Value &#x2F; 了解已通过的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Progress- 过程"><span class="nav-text">The Progress &#x2F; 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extension- 拓展"><span class="nav-text">Extension &#x2F; 拓展</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -688,19 +691,28 @@ information even if it fails and then restarts. / 经过上面的优化以后，
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
   &copy; 2018 – 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">何佳林</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
@@ -712,7 +724,6 @@ information even if it fails and then restarts. / 经过上面的优化以后，
 
 
 
-        
       </div>
     </footer>
   </div>
@@ -725,9 +736,19 @@ information even if it fails and then restarts. / 经过上面的优化以后，
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/zh/lib/velocity/velocity.min.js"></script>
   <script src="/zh/lib/velocity/velocity.ui.min.js"></script>
-<script src="/zh/js/utils.js"></script><script src="/zh/js/motion.js"></script>
+
+<script src="/zh/js/utils.js"></script>
+
+<script src="/zh/js/motion.js"></script>
+
+
 <script src="/zh/js/schemes/pisces.js"></script>
-<script src="/zh/js/next-boot.js"></script><script src="/zh/js/bookmark.js"></script>
+
+
+<script src="/zh/js/next-boot.js"></script>
+
+<script src="/zh/js/bookmark.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -735,6 +756,7 @@ var pjax = new Pjax({
     '#page-configurations',
     '.content-wrap',
     '.post-toc-wrap',
+    '.languages',
     '#pjax'
   ],
   switches: {
@@ -746,7 +768,7 @@ var pjax = new Pjax({
 });
 
 window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
     var code = element.text || element.textContent || element.innerHTML || '';
     var parent = element.parentNode;
     parent.removeChild(element);
@@ -765,8 +787,8 @@ window.addEventListener('pjax:success', () => {
       // Force synchronous loading of peripheral JS.
       script.async = false;
     }
-    if (element.getAttribute('pjax') !== null) {
-      element.setAttribute('pjax', '');
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
     }
     if (code !== '') {
       script.appendChild(document.createTextNode(code));
@@ -778,6 +800,7 @@ window.addEventListener('pjax:success', () => {
   if (CONFIG.motion.enable) {
     NexT.motion.integrator
       .init()
+      .add(NexT.motion.middleWares.subMenu)
       .add(NexT.motion.middleWares.postList)
       .bootstrap();
   }
@@ -793,7 +816,8 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/zh/js/local-search.js"></script>
+  
+<script src="/zh/js/local-search.js"></script>
 
 
 
@@ -802,31 +826,32 @@ window.addEventListener('pjax:success', () => {
 
 
 
-<script pjax>
-if (document.querySelectorAll('div.pdf').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
-    document.querySelectorAll('div.pdf').forEach(element => {
-      PDFObject.embed(element.getAttribute('target'), element, {
-        pdfOpenParams: {
-          navpanes: 0,
-          toolbar: 0,
-          statusbar: 0,
-          pagemode: 'thumbs',
-          view: 'FitH'
-        },
-        PDFJS_URL: '/lib/pdf/web/viewer.html',
-        height: element.getAttribute('height') || '768px'
-      });
-    });
-  }, window.PDFObject);
-}
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/zh/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
 </script>
 
 
 
 
     <div id="pjax">
-
   
 
   
@@ -837,16 +862,6 @@ if (document.querySelectorAll('div.pdf').length) {
 
 
   
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout: 3000,
-        priority: true,
-        ignores: [uri => uri.includes('#'),uri => uri == 'https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/',]
-      });
-      });
-  </script>
 
 <script>
   function loadCount() {
@@ -859,16 +874,16 @@ if (document.querySelectorAll('div.pdf').length) {
   window.addEventListener('load', loadCount, false);
 </script>
 <script>
-  function loadComments() {
+  var disqus_config = function() {
+    this.page.url = "https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/";
+    this.page.identifier = "posts/Paxos-Made-Simple-Reading/";
+    this.page.title = "Paxos Made Simple 翻译及总结";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
       DISQUS.reset({
         reload: true,
-        config: {page: {
-            url: "https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/",
-            identifier: "posts/Paxos-Made-Simple-Reading/",
-            title: "Paxos Made Simple 翻译及总结"
-          }
-        }
+        config: disqus_config
       });
     } else {
       var d = document, s = d.createElement('script');
@@ -876,28 +891,7 @@ if (document.querySelectorAll('div.pdf').length) {
       s.setAttribute('data-timestamp', '' + +new Date());
       (d.head || d.body).appendChild(s);
     }
-  }
-    (function() {
-      var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
-      if (offsetTop <= 0) {
-        // load directly when there's no a scrollbar
-        window.addEventListener('load', loadComments, false);
-      } else {
-        var disqus_scroll = () => {
-          // offsetTop may changes because of manually resizing browser window or lazy loading images.
-          var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
-          var scrollTop = window.scrollY;
-
-          // pre-load comments a bit? (margin or anything else)
-          if (offsetTop - scrollTop < 60) {
-            window.removeEventListener('scroll', disqus_scroll);
-            loadComments();
-          }
-        };
-        window.addEventListener('scroll', disqus_scroll);
-      }
-    })();
-  
+  });
 </script>
 
     </div>

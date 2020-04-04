@@ -25,8 +25,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;paxos-made-simple-翻译及总结&quot;&gt;Paxos Made Simple 翻译及总结&lt;/h1&gt;
-&lt;h2 id=&quot;warm-up-预热&quot;&gt;Warm-up / 预热&lt;/h2&gt;
+      &lt;h1 id=&quot;Paxos-Made-Simple-翻译及总结&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Paxos-Made-Simple-翻译及总结&quot;&gt;¶&lt;/a&gt;Paxos Made Simple 翻译及总结&lt;/h1&gt;
+&lt;h2 id=&quot;Warm-up-预热&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Warm-up-预热&quot;&gt;¶&lt;/a&gt;Warm-up / 预热&lt;/h2&gt;
 &lt;p&gt;The Paxos algorithm, when presented in plain English, is very simple.&lt;/p&gt;
 &lt;p align=&quot;right&quot;&gt;Paxos Made Simple, by Leslie Lamport&lt;/p&gt;
 The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don&#39;t have the brain of Leslie Lamport.
@@ -52,7 +52,7 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
     
     <summary type="html">
     
-      &lt;h1 id=&quot;浅谈递归&quot;&gt;浅谈递归&lt;/h1&gt;
+      &lt;h1 id=&quot;浅谈递归&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#浅谈递归&quot;&gt;¶&lt;/a&gt;浅谈递归&lt;/h1&gt;
 &lt;p&gt;递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。&lt;/p&gt;
 &lt;p&gt;用一张图来说明：&lt;/p&gt;
 &lt;img src=&quot;/zh/posts/About-Recursion/Recursion-Google.png&quot; class=&quot;&quot; title=&quot;不过这个递归好像会导致栈区溢出 😂&quot;&gt;
@@ -80,7 +80,7 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
     
     <summary type="html">
     
-      &lt;h1 id=&quot;你好-世界&quot;&gt;你好，世界&lt;/h1&gt;
+      &lt;h1 id=&quot;你好，世界&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#你好，世界&quot;&gt;¶&lt;/a&gt;你好，世界&lt;/h1&gt;
 &lt;p&gt;这是我的个人博客。&lt;/p&gt;
 &lt;p&gt;主要分享对于技术学习和思考，但不局限于此。&lt;/p&gt;
 &lt;p&gt;坚持原创，不定时更新。&lt;/p&gt;

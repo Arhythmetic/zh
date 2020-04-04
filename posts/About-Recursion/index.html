@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#E91E63">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 4.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png">
@@ -15,50 +15,28 @@
 
 <link rel="stylesheet" href="/zh/lib/font-awesome/css/font-awesome.min.css">
 
-
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://bitrhythm.github.io/zh').hostname,
-    root: '/zh/',
-    scheme: 'Pisces',
-    version: '7.6.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":false,"style":"flat"},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
-    bookmark: {"enable":true,"color":"#222222","save":"auto"},
-    fancybox: false,
-    mediumzoom: true,
-    lazyload: true,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},
-    path: 'search.xml',
-    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bitrhythm.github.io","root":"/zh/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
-<meta name="keywords" content="思考,总结">
+  <meta name="description" content="¶浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
-<meta property="og:url" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;About-Recursion&#x2F;index.html">
+<meta property="og:url" content="https://bitrhythm.github.io/zh/posts/About-Recursion/index.html">
 <meta property="og:site_name" content="学习与探索">
-<meta property="og:description" content="浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;About-Recursion&#x2F;Recursion-Google.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;About-Recursion&#x2F;Recursion-Process.svg">
-<meta property="og:image" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;About-Recursion&#x2F;Inorder-Traverse.svg">
-<meta property="og:updated_time" content="2018-10-17T16:00:00.000Z">
+<meta property="og:description" content="¶浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bitrhythm.github.io/zh/posts/About-Recursion/Recursion-Google.png">
+<meta property="og:image" content="https://bitrhythm.github.io/zh/posts/About-Recursion/Recursion-Process.svg">
+<meta property="og:image" content="https://bitrhythm.github.io/zh/posts/About-Recursion/Inorder-Traverse.svg">
+<meta property="article:published_time" content="2018-08-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2018-10-17T16:00:00.000Z">
+<meta property="article:author" content="何佳林">
+<meta property="article:tag" content="思考">
+<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;bitrhythm.github.io&#x2F;zh&#x2F;posts&#x2F;About-Recursion&#x2F;Recursion-Google.png">
+<meta name="twitter:image" content="https://bitrhythm.github.io/zh/posts/About-Recursion/Recursion-Google.png">
 
 <link rel="canonical" href="https://bitrhythm.github.io/zh/posts/About-Recursion/">
 
@@ -67,10 +45,9 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -114,19 +91,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/zh/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">学习与探索</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <h1 class="site-subtitle" itemprop="description">计算机，自行车，还有音乐</h1>
-      
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
@@ -134,11 +98,28 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/zh/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">学习与探索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">计算机，自行车，还有音乐</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
@@ -185,29 +166,34 @@
         </a>
       </li>
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -223,14 +209,13 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content post posts-expand">
             
 
-  <div class="posts-expand">
-      
+    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://bitrhythm.github.io/zh/posts/About-Recursion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -243,9 +228,9 @@
       <meta itemprop="name" content="学习与探索">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           浅谈递归<a href="https://github.com/Bitrhythm/Blogs/blob/master/zh/source/_posts/About-Recursion.md" class="post-edit-link" title="编辑" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-pencil"></i></a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -269,15 +254,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
+                  <a href="/zh/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zh/categories/%E7%BC%96%E7%A8%8B/%E9%80%92%E5%BD%92/" itemprop="url" rel="index">
-                    <span itemprop="name">递归</span>
-                  </a>
+                  <a href="/zh/categories/%E7%BC%96%E7%A8%8B/%E9%80%92%E5%BD%92/" itemprop="url" rel="index"><span itemprop="name">递归</span></a>
                 </span>
             </span>
 
@@ -290,7 +271,7 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/zh/posts/About-Recursion/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/zh/posts/About-Recursion/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="posts/About-Recursion/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -308,7 +289,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>12 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -320,12 +301,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="浅谈递归"> 浅谈递归 </h1>
+        <h1 id="浅谈递归"><a class="header-anchor" href="# 浅谈递归">¶</a> 浅谈递归 </h1>
 <p> 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
 <p> 用一张图来说明：</p>
-<img class title=" 不过这个递归好像会导致栈区溢出 😂" data-src="/zh/posts/About-Recursion/Recursion-Google.png">
+<img data-src="/zh/posts/About-Recursion/Recursion-Google.png" class=""title=" 不过这个递归好像会导致栈区溢出 😂">
 <a id="more"></a>
-<h2 id="从与循环的关系看递归"> 从与循环的关系看递归 </h2>
+<h2 id="从与循环的关系看递归"><a class="header-anchor" href="# 从与循环的关系看递归">¶</a> 从与循环的关系看递归 </h2>
 <p> 从这个角度看，递归可以分为两种。</p>
 <ol>
 <li><strong> 可以直接改写成循环的 </strong>，这里称为第一类递归。</li>
@@ -337,14 +318,14 @@
 <p> 第二种情况的例子有二叉树的遍历等：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里以二叉树的中序遍历为例 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 二叉树节点 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    Item item;</span><br><span class="line">    Node&lt;Item&gt; left;</span><br><span class="line">    Node&lt;Item&gt; right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树中序遍历 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        traverse(root.left);</span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">        traverse(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中序遍历 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Node&lt;Item&gt;&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        Node&lt;Item&gt; node = root;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span> || !stack.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.left();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            node = stack.pop();</span><br><span class="line">            System.out.println(node.item);</span><br><span class="line">            node = node.right();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 通过上面的代码可以看到，这一类递归若要改写成循环需要借助栈的帮助，就此例而言时间复杂度没有变化，都为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>。</p>
-<h2 id="如何区分这两种递归"> 如何区分这两种递归 </h2>
-<h3 id="尾递归"> 尾递归 </h3>
+<h2 id="如何区分这两种递归"><a class="header-anchor" href="# 如何区分这两种递归">¶</a> 如何区分这两种递归 </h2>
+<h3 id="尾递归"><a class="header-anchor" href="# 尾递归">¶</a> 尾递归 </h3>
 <p> 在具体讨论如何区分这两种递归之前，我们先来了解一个已有的定义：<em> 尾递归 </em></p>
 <p> 在具体讨论尾递归之前，我们先来了解一下另一个已有的定义：<em> 尾调用 </em></p>
 <p> 尾调用是指：一个函数里的最后一个动作是返回一个函数调用的情形。例如：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">g</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 f 中最后一个动作是返回对函数 g 的调用，这就称之为尾调用 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> g();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 h 最后一个动作不是返回对函数 g 的调用，而是返回对函数 g 的调用结果再加 1，这就不是尾调用了 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">h</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> g() + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数 i 可以改写成函数 f，但函数 i 不能算是严格意义上的尾调用 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">i</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">int</span> g = g();</span><br><span class="line">    <span class="keyword">return</span> g;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 而尾递归就是尾调用的的特例，尾递归函数中最后一个动作是返回对该函数自身的调用。上文中，辗转相除算法的递归形式就是尾递归的例子。而尾递归属于第一类递归，即可以直接改写为循环，不需要栈的辅助。而很多现代的编译期甚至会直接对尾递归进行优化，消除调用过程中的栈帧，这样就再也不会 StackOverflow 啦。</p>
-<h3 id="递归函数的执行过程"> 递归函数的执行过程 </h3>
+<h3 id="递归函数的执行过程"><a class="header-anchor" href="# 递归函数的执行过程">¶</a> 递归函数的执行过程 </h3>
 <p> 为了了解为什么递归会分成这两种以及为什么尾递归属于第一类递归，我们先来分析递归函数的执行过程。</p>
 <p> 对于任何递归函数，其执行流程都可以看成两部分：</p>
 <ul>
@@ -358,10 +339,10 @@
 </li>
 </ul>
 <p> 以辗转相除算法的递归函数为例，其执行过程如下图所示：</p>
-<img class title=" 辗转相除算法的递归函数执行流程图示 " data-src="/zh/posts/About-Recursion/Recursion-Process.svg">
+<img data-src="/zh/posts/About-Recursion/Recursion-Process.svg" class=""title=" 辗转相除算法的递归函数执行流程图示 ">
 <p> 再以二叉树的中序遍历递归函数为例，其递归调用过程如下：</p>
-<img class title=" 二叉树的中序遍历递归函数执行流程图示 " data-src="/zh/posts/About-Recursion/Inorder-Traverse.svg">
-<h3 id="观察"> 观察 </h3>
+<img data-src="/zh/posts/About-Recursion/Inorder-Traverse.svg" class=""title=" 二叉树的中序遍历递归函数执行流程图示 ">
+<h3 id="观察"><a class="header-anchor" href="# 观察">¶</a> 观察 </h3>
 <p> 首先，我们来看辗转相除算法的递归调用过程，可以发现其具备以下特征：</p>
 <ol>
 <li> 递归调用过程单调，这里的单调是指该函数的执行过程是先连续的向下调用，紧接着连续的向上返回直至结束。</li>
@@ -377,27 +358,27 @@
 <li> 向上返回过程中是否用到参数。</li>
 <li> 递归调用过程是否单调。</li>
 </ol>
-<h3 id="思考"> 思考 </h3>
-<h4 id="递归调用过程不单调"> 递归调用过程不单调 </h4>
+<h3 id="思考"><a class="header-anchor" href="# 思考">¶</a> 思考 </h3>
+<h4 id="递归调用过程不单调"><a class="header-anchor" href="# 递归调用过程不单调">¶</a> 递归调用过程不单调 </h4>
 <p> 我们先来思考最显而易见的情形，当递归函数的调用过程不单调时，就如上文中提到的二叉树的中序遍历，由于每一层的递归调用的参数都有可能在接下来的调用过程中被再次用到，所以必须要把每一层的调用信息（包括参数，局部变量等）都存入栈中，以备在后面的调用过程中再次使用，所以，当递归调用过程不单调的时候，栈是必须的，因此该类递归属于第二类递归，即在改写为循环时需要使用到栈。</p>
-<h4 id="递归调用过程单调"> 递归调用过程单调 </h4>
+<h4 id="递归调用过程单调"><a class="header-anchor" href="# 递归调用过程单调">¶</a> 递归调用过程单调 </h4>
 <p> 既然递归调用过程不单调属于第二类递归，那么是不是递归调用过程单调就属于第一类递归了呢？答案比想象中的要复杂，请看下面的分析：</p>
-<h5 id="尾递归 -v2"> 尾递归 </h5>
+<h5 id="尾递归 -v2"><a class="header-anchor" href="# 尾递归 -v2">¶</a> 尾递归 </h5>
 <p> 首先我们来看递归调用过程单调中最简单的情形——尾递归：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> either;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 我们可以看到，尾递归函数的调用过程不仅单调，而且在连续向上返回的过程中除了向上层传递结果并没有额外操作，所有运算在连续向下调用的过程中就已完成，基于这种特点，我们可以认为其和循环直接等价。所以尾递归属于第一类循环，即改写为循环时无需使用栈。</p>
-<h5 id="用到常数"> 用到常数 </h5>
+<h5 id="用到常数"><a class="header-anchor" href="# 用到常数">¶</a> 用到常数 </h5>
 <p> 现在我们在尾递归的基础上增加一些操作，在不改变其调用过程的单调性的前提下，在连续向上返回的这个过程中加入额外的运算：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面的代码仅用于说明概念，其作用已经不再是辗转相除法求最大公约数 </span></span><br><span class="line"><span class="comment">// 递归 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> CONSTANT = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other) + CONSTANT;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> CONSTANT = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder;</span><br><span class="line"></span><br><span class="line">            sum += CONSTANT;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> either + sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 我们可以看到，虽然现在的递归函数已经不像尾递归那么“纯正”，但其仍然属于第一类递归。看来在向上返回的过程中加上和常数的操作并不能改变其性质。</p>
-<h5 id="用到参数"> 用到参数 </h5>
+<h5 id="用到参数"><a class="header-anchor" href="# 用到参数">¶</a> 用到参数 </h5>
 <p> 既然加上和常数操作不能改变其性质，那么要是加上和变量的操作呢？递归函数里面的变量从哪里来呢？参数！嗯，所以我们现在来试试在不改变其调用过程的单调性的前提下，在向上返回的过程中加上对参数的操作：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面的代码仅用于说明概念，其作用已经不再是辗转相除法求最大公约数 </span></span><br><span class="line"><span class="comment">// 递归 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other) + other;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            sum += other;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> either + sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 什么？？？怎么还是可以在改写为循环的时候不用到栈？难道递归调用过程单调就能断定递归函数属于第一类递归吗？其实不然，请看下面的例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先序遍历二叉树最作边的路径上的全部节点 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 二叉树节点 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    Item item;</span><br><span class="line">    Node&lt;Item&gt; left;</span><br><span class="line">    Node&lt;Item&gt; right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树先序遍历最左路径 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">        traverse(root.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中先序遍历最左路径 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(root.item);</span><br><span class="line">            root = root.left;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树后序遍历最左路径 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        traverse(root.left);</span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中后序遍历最左路径 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Node&lt;Item&gt;&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        <span class="keyword">for</span> (Node&lt;Item&gt; node = root; node != <span class="keyword">null</span>; node = node.left) &#123;</span><br><span class="line">            stack.push(node);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            Node&lt;Item&gt; node = stack.pop();</span><br><span class="line">            System.out.println(node);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 我们可以看到，在这个例子中，递归函数的调用过程仍然单调，同样也实在连续向上返回的过程中用到了参数，但为什么这个例子中就要用到栈呢？仔细观察，我们可以发现，上一个例子中我们作的操作比较特殊，这个操作是对一个整数的加法，而对整数的加法是一个累计的操作，我们只关心这个累计而来的结果，而不关心他是从第一个累加到最后一个还是从最后一个累加到第一个，所以在改写为循环时，通过把这些本该在第一次循环完之后再做的累加操作直接放在第一次循环中执行，就可以在不影响结果的情况下消除栈的使用。而在这个例子中，对二叉树节点的遍历操作，遍历的顺序也是影响结果的因素之一，所以对于后序遍历，我们必需要用到栈。</p>
 <p> 说到这里，我们再来回顾一下刚才用到常数的例子，无论是对于常数的累加操作，还是遍历操作，顺序都不会对结果造成任何影响，所以我们可以在改写为循环是消除掉对栈的使用。</p>
-<h3 id="结论"> 结论 </h3>
+<h3 id="结论"><a class="header-anchor" href="# 结论">¶</a> 结论 </h3>
 <ul>
 <li>
 <p> 递归调用过程不单调 -&gt; 改写为循环时需要用到栈（第二类递归）</p>
@@ -476,18 +457,39 @@
   
   
 
-  </div>
 
 
           </div>
           
     
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -578,19 +580,28 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
   &copy; 2018 – 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">何佳林</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> 强力驱动
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
@@ -602,7 +613,6 @@
 
 
 
-        
       </div>
     </footer>
   </div>
@@ -615,9 +625,19 @@
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/zh/lib/velocity/velocity.min.js"></script>
   <script src="/zh/lib/velocity/velocity.ui.min.js"></script>
-<script src="/zh/js/utils.js"></script><script src="/zh/js/motion.js"></script>
+
+<script src="/zh/js/utils.js"></script>
+
+<script src="/zh/js/motion.js"></script>
+
+
 <script src="/zh/js/schemes/pisces.js"></script>
-<script src="/zh/js/next-boot.js"></script><script src="/zh/js/bookmark.js"></script>
+
+
+<script src="/zh/js/next-boot.js"></script>
+
+<script src="/zh/js/bookmark.js"></script>
+
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -625,6 +645,7 @@ var pjax = new Pjax({
     '#page-configurations',
     '.content-wrap',
     '.post-toc-wrap',
+    '.languages',
     '#pjax'
   ],
   switches: {
@@ -636,7 +657,7 @@ var pjax = new Pjax({
 });
 
 window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
     var code = element.text || element.textContent || element.innerHTML || '';
     var parent = element.parentNode;
     parent.removeChild(element);
@@ -655,8 +676,8 @@ window.addEventListener('pjax:success', () => {
       // Force synchronous loading of peripheral JS.
       script.async = false;
     }
-    if (element.getAttribute('pjax') !== null) {
-      element.setAttribute('pjax', '');
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
     }
     if (code !== '') {
       script.appendChild(document.createTextNode(code));
@@ -668,6 +689,7 @@ window.addEventListener('pjax:success', () => {
   if (CONFIG.motion.enable) {
     NexT.motion.integrator
       .init()
+      .add(NexT.motion.middleWares.subMenu)
       .add(NexT.motion.middleWares.postList)
       .bootstrap();
   }
@@ -683,7 +705,8 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  <script src="/zh/js/local-search.js"></script>
+  
+<script src="/zh/js/local-search.js"></script>
 
 
 
@@ -692,31 +715,32 @@ window.addEventListener('pjax:success', () => {
 
 
 
-<script pjax>
-if (document.querySelectorAll('div.pdf').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
-    document.querySelectorAll('div.pdf').forEach(element => {
-      PDFObject.embed(element.getAttribute('target'), element, {
-        pdfOpenParams: {
-          navpanes: 0,
-          toolbar: 0,
-          statusbar: 0,
-          pagemode: 'thumbs',
-          view: 'FitH'
-        },
-        PDFJS_URL: '/lib/pdf/web/viewer.html',
-        height: element.getAttribute('height') || '768px'
-      });
-    });
-  }, window.PDFObject);
-}
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/zh/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
 </script>
 
 
 
 
     <div id="pjax">
-
   
 
   
@@ -727,16 +751,6 @@ if (document.querySelectorAll('div.pdf').length) {
 
 
   
-  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-  <script>
-      window.addEventListener('load', () => {
-      quicklink({
-        timeout: 3000,
-        priority: true,
-        ignores: [uri => uri.includes('#'),uri => uri == 'https://bitrhythm.github.io/zh/posts/About-Recursion/',]
-      });
-      });
-  </script>
 
 <script>
   function loadCount() {
@@ -749,16 +763,16 @@ if (document.querySelectorAll('div.pdf').length) {
   window.addEventListener('load', loadCount, false);
 </script>
 <script>
-  function loadComments() {
+  var disqus_config = function() {
+    this.page.url = "https://bitrhythm.github.io/zh/posts/About-Recursion/";
+    this.page.identifier = "posts/About-Recursion/";
+    this.page.title = "浅谈递归";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
       DISQUS.reset({
         reload: true,
-        config: {page: {
-            url: "https://bitrhythm.github.io/zh/posts/About-Recursion/",
-            identifier: "posts/About-Recursion/",
-            title: "浅谈递归"
-          }
-        }
+        config: disqus_config
       });
     } else {
       var d = document, s = d.createElement('script');
@@ -766,28 +780,7 @@ if (document.querySelectorAll('div.pdf').length) {
       s.setAttribute('data-timestamp', '' + +new Date());
       (d.head || d.body).appendChild(s);
     }
-  }
-    (function() {
-      var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
-      if (offsetTop <= 0) {
-        // load directly when there's no a scrollbar
-        window.addEventListener('load', loadComments, false);
-      } else {
-        var disqus_scroll = () => {
-          // offsetTop may changes because of manually resizing browser window or lazy loading images.
-          var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
-          var scrollTop = window.scrollY;
-
-          // pre-load comments a bit? (margin or anything else)
-          if (offsetTop - scrollTop < 60) {
-            window.removeEventListener('scroll', disqus_scroll);
-            loadComments();
-          }
-        };
-        window.addEventListener('scroll', disqus_scroll);
-      }
-    })();
-  
+  });
 </script>
 
     </div>
