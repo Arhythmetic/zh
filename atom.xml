@@ -5,9 +5,9 @@
   <subtitle>计算机，自行车，还有音乐</subtitle>
   <link href="/zh/atom.xml" rel="self"/>
   
-  <link href="https://bitrhythm.github.io/zh/"/>
+  <link href="https://cachecoherence.github.io/zh/"/>
   <updated>2018-09-29T16:00:00.000Z</updated>
-  <id>https://bitrhythm.github.io/zh/</id>
+  <id>https://cachecoherence.github.io/zh/</id>
   
   <author>
     <name>回锅肉</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Paxos Made Simple 翻译及总结</title>
-    <link href="https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/"/>
-    <id>https://bitrhythm.github.io/zh/posts/Paxos-Made-Simple-Reading/</id>
+    <link href="https://cachecoherence.github.io/zh/posts/Paxos-Made-Simple-Reading/"/>
+    <id>https://cachecoherence.github.io/zh/posts/Paxos-Made-Simple-Reading/</id>
     <published>2018-09-26T16:00:00.000Z</published>
     <updated>2018-09-29T16:00:00.000Z</updated>
     
@@ -36,17 +36,17 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
     </summary>
     
     
-      <category term="分布式系统" scheme="https://bitrhythm.github.io/zh/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+      <category term="分布式系统" scheme="https://cachecoherence.github.io/zh/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="论文翻译" scheme="https://bitrhythm.github.io/zh/tags/%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+      <category term="论文翻译" scheme="https://cachecoherence.github.io/zh/tags/%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>浅谈递归</title>
-    <link href="https://bitrhythm.github.io/zh/posts/About-Recursion/"/>
-    <id>https://bitrhythm.github.io/zh/posts/About-Recursion/</id>
+    <link href="https://cachecoherence.github.io/zh/posts/About-Recursion/"/>
+    <id>https://cachecoherence.github.io/zh/posts/About-Recursion/</id>
     <published>2018-08-28T16:00:00.000Z</published>
     <updated>2018-10-17T16:00:00.000Z</updated>
     
@@ -60,21 +60,21 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
     </summary>
     
     
-      <category term="编程" scheme="https://bitrhythm.github.io/zh/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://cachecoherence.github.io/zh/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="递归" scheme="https://bitrhythm.github.io/zh/categories/%E7%BC%96%E7%A8%8B/%E9%80%92%E5%BD%92/"/>
+      <category term="递归" scheme="https://cachecoherence.github.io/zh/categories/%E7%BC%96%E7%A8%8B/%E9%80%92%E5%BD%92/"/>
     
     
-      <category term="思考" scheme="https://bitrhythm.github.io/zh/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://cachecoherence.github.io/zh/tags/%E6%80%9D%E8%80%83/"/>
     
-      <category term="总结" scheme="https://bitrhythm.github.io/zh/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://cachecoherence.github.io/zh/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>你好，世界</title>
-    <link href="https://bitrhythm.github.io/zh/posts/Hello-World/"/>
-    <id>https://bitrhythm.github.io/zh/posts/Hello-World/</id>
+    <link href="https://cachecoherence.github.io/zh/posts/Hello-World/"/>
+    <id>https://cachecoherence.github.io/zh/posts/Hello-World/</id>
     <published>2018-03-19T16:00:00.000Z</published>
     <updated>2018-10-09T16:00:00.000Z</updated>
     
@@ -88,10 +88,10 @@ The Fast Paxos algorithm, when presented in plain English, is still quite hard t
     </summary>
     
     
-      <category term="杂项" scheme="https://bitrhythm.github.io/zh/categories/%E6%9D%82%E9%A1%B9/"/>
+      <category term="杂项" scheme="https://cachecoherence.github.io/zh/categories/%E6%9D%82%E9%A1%B9/"/>
     
     
-      <category term="测试" scheme="https://bitrhythm.github.io/zh/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://cachecoherence.github.io/zh/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
