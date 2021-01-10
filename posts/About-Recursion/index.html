@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#E91E63">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/zh/images/apple-touch-icon-lightbulb.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/zh/images/favicon-32x32-lightbulb.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/zh/images/favicon-16x16-lightbulb.png">
@@ -24,7 +24,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
 <meta property="og:url" content="https://arhythmetic.github.io/zh/posts/About-Recursion/index.html">
-<meta property="og:site_name" content="学习与探索">
+<meta property="og:site_name" content="回锅录">
 <meta property="og:description" content="¶浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://arhythmetic.github.io/zh/posts/About-Recursion/Recursion-Google.png">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>浅谈递归 | 学习与探索</title>
+  <title>浅谈递归 | 回锅录</title>
   
 
 
@@ -82,7 +82,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/zh/atom.xml" title="学习与探索" type="application/atom+xml">
+<link rel="alternate" href="/zh/atom.xml" title="回锅录" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -103,10 +103,10 @@
 
     <a href="/zh/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">学习与探索</h1>
+      <h1 class="site-title">回锅录</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">计算机，自行车，还有音乐</p>
+      <p class="site-subtitle" itemprop="description">学习 & 探索</p>
   </div>
 
   <div class="site-nav-right">
@@ -225,7 +225,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="学习与探索">
+      <meta itemprop="name" content="回锅录">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -289,7 +289,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>12 分钟</span>
             </span>
 
         </div>
@@ -314,10 +314,10 @@
 </ol>
 <p> 第一种情况的例子有用于求最大公约数的辗转相除算法，还有求斐波那契数列第 n 项的算法，二分查找等：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> either;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式斐波那契算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> number;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(number - <span class="number">1</span>) + fibonacci(number - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 尾递归式斐波那契算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TailRecursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(<span class="number">0</span>, <span class="number">1</span>, number);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> current, <span class="keyword">int</span> next, <span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (number &lt; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (number &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(next, current + next, number--);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式斐波那契算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> next = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; number; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> temporary = current + next;</span><br><span class="line">            current = next;</span><br><span class="line">            next = temporary;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> current;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 通过上面的代码可以看到，这一类的递归和循环之间存在着比较直接的对应关系，改写成循环不需要借助任何辅助数据结构，并且改写成循环之后还有可能降低开销甚至时间复杂度。例如：求斐波那契数列第 n 项的算法的递归形式的时间复杂的是惊人的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(2^n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，尾递归形式的时间复杂度是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，而对应的循环形式的时间复杂度也是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+<p> 通过上面的代码可以看到，这一类的递归和循环之间存在着比较直接的对应关系，改写成循环不需要借助任何辅助数据结构，并且改写成循环之后还有可能降低开销甚至时间复杂度。例如：求斐波那契数列第 n 项的算法的递归形式的时间复杂的是惊人的 $O(2^n)$，尾递归形式的时间复杂度是 $O(n)$，而对应的循环形式的时间复杂度也是 $O(n)$。</p>
 <p> 第二种情况的例子有二叉树的遍历等：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里以二叉树的中序遍历为例 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 二叉树节点 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    Item item;</span><br><span class="line">    Node&lt;Item&gt; left;</span><br><span class="line">    Node&lt;Item&gt; right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归式二叉树中序遍历 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        traverse(root.left);</span><br><span class="line">        System.out.println(root.item);</span><br><span class="line">        traverse(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式二叉树中序遍历 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(Node&lt;Item&gt; root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Node&lt;Item&gt;&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        Node&lt;Item&gt; node = root;</span><br><span class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span> || !stack.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">                stack.push(node);</span><br><span class="line">                node = node.left();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            node = stack.pop();</span><br><span class="line">            System.out.println(node.item);</span><br><span class="line">            node = node.right();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 通过上面的代码可以看到，这一类递归若要改写成循环需要借助栈的帮助，就此例而言时间复杂度没有变化，都为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
+<p> 通过上面的代码可以看到，这一类递归若要改写成循环需要借助栈的帮助，就此例而言时间复杂度没有变化，都为 $O(n)$。</p>
 <h2 id="如何区分这两种递归"><a class="header-anchor" href="# 如何区分这两种递归">¶</a> 如何区分这两种递归 </h2>
 <h3 id="尾递归"><a class="header-anchor" href="# 尾递归">¶</a> 尾递归 </h3>
 <p> 在具体讨论如何区分这两种递归之前，我们先来了解一个已有的定义：<em> 尾递归 </em></p>
@@ -363,7 +363,7 @@
 <p> 我们先来思考最显而易见的情形，当递归函数的调用过程不单调时，就如上文中提到的二叉树的中序遍历，由于每一层的递归调用的参数都有可能在接下来的调用过程中被再次用到，所以必须要把每一层的调用信息（包括参数，局部变量等）都存入栈中，以备在后面的调用过程中再次使用，所以，当递归调用过程不单调的时候，栈是必须的，因此该类递归属于第二类递归，即在改写为循环时需要使用到栈。</p>
 <h4 id="递归调用过程单调"><a class="header-anchor" href="# 递归调用过程单调">¶</a> 递归调用过程单调 </h4>
 <p> 既然递归调用过程不单调属于第二类递归，那么是不是递归调用过程单调就属于第一类递归了呢？答案比想象中的要复杂，请看下面的分析：</p>
-<h5 id="尾递归 -v2"><a class="header-anchor" href="# 尾递归 -v2">¶</a> 尾递归 </h5>
+<h5 id="尾递归 -2"><a class="header-anchor" href="# 尾递归 -2">¶</a> 尾递归 </h5>
 <p> 首先我们来看递归调用过程单调中最简单的情形——尾递归：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recursion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (other == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> either;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(other, either % other)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环式辗转相除算法 </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Iteration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> either, <span class="keyword">int</span> other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (other != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> remainder = either % other;</span><br><span class="line">            either = other;</span><br><span class="line">            other = remainder;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> either;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> 我们可以看到，尾递归函数的调用过程不仅单调，而且在连续向上返回的过程中除了向上层传递结果并没有额外操作，所有运算在连续向下调用的过程中就已完成，基于这种特点，我们可以认为其和循环直接等价。所以尾递归属于第一类循环，即改写为循环时无需使用栈。</p>
@@ -514,7 +514,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅谈递归"><span class="nav-text"> 浅谈递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从与循环的关系看递归"><span class="nav-text"> 从与循环的关系看递归 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何区分这两种递归"><span class="nav-text"> 如何区分这两种递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#尾递归"><span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归函数的执行过程"><span class="nav-text"> 递归函数的执行过程 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察"><span class="nav-text"> 观察 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思考"><span class="nav-text"> 思考 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程不单调"><span class="nav-text"> 递归调用过程不单调 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递归调用过程单调"><span class="nav-text"> 递归调用过程单调 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#尾递归 -v2"><span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到常数"><span class="nav-text"> 用到常数 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用到参数"><span class="nav-text"> 用到参数 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-text"> 结论 </span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88%E9%80%92%E5%BD%92"><span class="nav-text"> 浅谈递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%85%B3%E7%B3%BB%E7%9C%8B%E9%80%92%E5%BD%92"><span class="nav-text"> 从与循环的关系看递归 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E8%BF%99%E4%B8%A4%E7%A7%8D%E9%80%92%E5%BD%92"><span class="nav-text"> 如何区分这两种递归 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92"><span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-text"> 递归函数的执行过程 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F"><span class="nav-text"> 观察 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-text"> 思考 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%8D%E5%8D%95%E8%B0%83"><span class="nav-text"> 递归调用过程不单调 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E5%8D%95%E8%B0%83"><span class="nav-text"> 递归调用过程单调 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92%20-2"><span class="nav-text"> 尾递归 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%B8%B8%E6%95%B0"><span class="nav-text"> 用到常数 </span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%8F%82%E6%95%B0"><span class="nav-text"> 用到参数 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text"> 结论 </span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -596,7 +596,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">44 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
@@ -742,10 +742,60 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
 
   
       
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
-  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
