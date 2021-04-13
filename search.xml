@@ -7,7 +7,7 @@
 <p> 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
 <p> 用一张图来说明：</p>
 <img data-src="/zh/posts/About-Recursion/Recursion-Google.png" class=""title=" 不过这个递归好像会导致栈区溢出 😂">
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="从与循环的关系看递归"><a class="header-anchor" href="# 从与循环的关系看递归">¶</a> 从与循环的关系看递归 </h2>
 <p> 从这个角度看，递归可以分为两种。</p>
 <ol>
@@ -123,11 +123,11 @@
 <p> 这是我的个人博客。</p>
 <p> 主要分享对于技术学习和思考，但不局限于此。</p>
 <p> 坚持原创，不定时更新。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="代码"><a class="header-anchor" href="# 代码">¶</a> 代码 </h2>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// C</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;iostream&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello World!&quot;</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// C++</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;iostream&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello World!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="笔记"><a class="header-anchor" href="# 笔记">¶</a> 笔记 </h2>
 <div class="note default">
             <p>Hello World!</p>
@@ -171,7 +171,7 @@
 The Fast Paxos algorithm, when presented in plain English, is still quite hard to understand for those like us — people who don't have the brain of Leslie Lamport.
 <p align="right">A Simpler Proof for Paxos and Fast Paxos, by Keith Marzullo, Alessandro Mei and Hein Meling</p>
 <center style="font-size: 2em;">😂</center>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="The-Problem- 问题"><a class="header-anchor" href="#The-Problem- 问题">¶</a>The Problem / 问题</h2>
 <ul>
 <li>
