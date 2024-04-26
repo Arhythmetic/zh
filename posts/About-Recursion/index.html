@@ -14,17 +14,17 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"hyperscalar.github.io","root":"/zh/","images":"/zh/images","scheme":"Pisces","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#E91E63","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/zh/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true}}</script><script src="/zh/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hyperscalar.github.io","root":"/zh/","images":"/zh/images","scheme":"Pisces","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#E91E63","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/zh/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true}}</script><script src="/zh/js/config.js"></script>
 
-    <meta name="description" content="¶ 浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+    <meta name="description" content="递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈递归">
 <meta property="og:url" content="https://hyperscalar.github.io/zh/posts/About-Recursion/index.html">
 <meta property="og:site_name" content="回锅录">
-<meta property="og:description" content="¶ 浅谈递归 递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
+<meta property="og:description" content="递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。 用一张图来说明：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hyperscalar.github.io/zh/posts/About-Recursion/Recursion-Google.png">
 <meta property="og:image" content="https://hyperscalar.github.io/zh/posts/About-Recursion/Recursion-Process.svg">
@@ -258,7 +258,7 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88%E9%80%92%E5%BD%92"><span class="nav-number">1.</span> <span class="nav-text"> 浅谈递归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%85%B3%E7%B3%BB%E7%9C%8B%E9%80%92%E5%BD%92"><span class="nav-number">1.1.</span> <span class="nav-text"> 从与循环的关系看递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E8%BF%99%E4%B8%A4%E7%A7%8D%E9%80%92%E5%BD%92"><span class="nav-number">1.2.</span> <span class="nav-text"> 如何区分这两种递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 尾递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 递归函数的执行过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 观察</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 思考</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%8D%E5%8D%95%E8%B0%83"><span class="nav-number">1.2.4.1.</span> <span class="nav-text"> 递归调用过程不单调</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E5%8D%95%E8%B0%83"><span class="nav-number">1.2.4.2.</span> <span class="nav-text"> 递归调用过程单调</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92-2"><span class="nav-number">1.2.4.2.1.</span> <span class="nav-text"> 尾递归</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%B8%B8%E6%95%B0"><span class="nav-number">1.2.4.2.2.</span> <span class="nav-text"> 用到常数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.4.2.3.</span> <span class="nav-text"> 用到参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 结论</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%85%B3%E7%B3%BB%E7%9C%8B%E9%80%92%E5%BD%92"><span class="nav-number">1.</span> <span class="nav-text"> 从与循环的关系看递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E8%BF%99%E4%B8%A4%E7%A7%8D%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text"> 如何区分这两种递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92"><span class="nav-number">2.1.</span> <span class="nav-text"> 尾递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.2.</span> <span class="nav-text"> 递归函数的执行过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F"><span class="nav-number">2.3.</span> <span class="nav-text"> 观察</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">2.4.</span> <span class="nav-text"> 思考</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%8D%E5%8D%95%E8%B0%83"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 递归调用过程不单调</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B%E5%8D%95%E8%B0%83"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 递归调用过程单调</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92-2"><span class="nav-number">2.4.2.1.</span> <span class="nav-text"> 尾递归</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%B8%B8%E6%95%B0"><span class="nav-number">2.4.2.2.</span> <span class="nav-text"> 用到常数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E5%88%B0%E5%8F%82%E6%95%B0"><span class="nav-number">2.4.2.3.</span> <span class="nav-text"> 用到参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">2.5.</span> <span class="nav-text"> 结论</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -430,9 +430,7 @@ mjx-container[display="true"] + br {
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="浅谈递归"><a class="header-anchor" href="#浅谈递归">¶</a> 浅谈递归</h1>
-<p>递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
+    <div class="post-body" itemprop="articleBody"><p>递归是指在编程中函数在函数体中调用自身的过程，体现的是分而治之的思想。</p>
 <p>用一张图来说明：</p>
 <img data-src="/zh/posts/About-Recursion/Recursion-Google.png" class="" title="不过这个递归好像会导致栈区溢出 😂">
 <span id="more"></span>
@@ -554,7 +552,7 @@ mjx-container[display="true"] + br {
       <a href="https://hyperscalar.github.io/zh/posts/About-Recursion/" title="浅谈递归">https://hyperscalar.github.io/zh/posts/About-Recursion/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -569,12 +567,12 @@ mjx-container[display="true"] + br {
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/zh/posts/Hello-World/" rel="prev" title="你好，世界">
-                  <i class="fa fa-chevron-left"></i> 你好，世界
+                  <i class="fa fa-angle-left"></i> 你好，世界
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/zh/posts/Paxos-Made-Simple-Reading/" rel="next" title="Paxos Made Simple 翻译及总结">
-                  Paxos Made Simple 翻译及总结 <i class="fa fa-chevron-right"></i>
+                  Paxos Made Simple 翻译及总结 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -598,15 +596,14 @@ mjx-container[display="true"] + br {
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2018 – 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">回锅肉</span>
-</div>
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">回锅肉</span>
+  </div>
 <div class="wordcount">
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -638,18 +635,20 @@ mjx-container[display="true"] + br {
   <script size="128" alpha="1" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
 <script src="/zh/js/comments.js"></script><script src="/zh/js/utils.js"></script><script src="/zh/js/motion.js"></script><script src="/zh/js/next-boot.js"></script><script src="/zh/js/bookmark.js"></script><script src="/zh/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/zh/js/third-party/search/local-search.js"></script>
 
-  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/zh/lib/pdf/web/viewer.html"}</script>
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.12/pdfobject.min.js","integrity":"sha256-g2xji1rlE3KsGVClvuxTbcR0Kn2+wtQADSff2Tbb4zA="},"url":"/zh/lib/pdf/web/viewer.html"}</script>
   <script src="/zh/js/third-party/tags/pdf.js"></script>
 
-  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"neutral","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js","integrity":"sha256-3JloMMI/ZQx6ryuhhZTsQJQmGAkXeni6PkshX7UUO2s="}}</script>
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"neutral","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.min.js","integrity":"sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="}}</script>
   <script src="/zh/js/third-party/tags/mermaid.js"></script>
+
+
 
 
 
