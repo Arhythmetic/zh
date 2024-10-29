@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyperscalar.github.io/zh/about/index.html</loc>
+    
+    <lastmod>2024-10-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hyperscalar.github.io/zh/books/index.html</loc>
+    
+    <lastmod>2024-10-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hyperscalar.github.io/zh/categories/index.html</loc>
     
     <lastmod>2024-10-29</lastmod>
@@ -16,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://hyperscalar.github.io/zh/papers/index.html</loc>
-    
-    <lastmod>2024-10-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hyperscalar.github.io/zh/tags/index.html</loc>
     
     <lastmod>2024-10-29</lastmod>
@@ -30,14 +37,7 @@
   </url>
   
   <url>
-    <loc>https://hyperscalar.github.io/zh/about/index.html</loc>
-    
-    <lastmod>2024-10-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyperscalar.github.io/zh/books/index.html</loc>
+    <loc>https://hyperscalar.github.io/zh/papers/index.html</loc>
     
     <lastmod>2024-10-29</lastmod>
     
