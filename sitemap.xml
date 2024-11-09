@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hyperscalar.github.io/zh/about/</loc>
+    <loc>https://hyperscalar.github.io/zh/tags/</loc>
     
-    <lastmod>2024-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyperscalar.github.io/zh/books/</loc>
-    
-    <lastmod>2024-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyperscalar.github.io/zh/categories/</loc>
-    
-    <lastmod>2024-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyperscalar.github.io/zh/courses/</loc>
-    
-    <lastmod>2024-11-03</lastmod>
+    <lastmod>2024-11-09</lastmod>
     
   </url>
   
   <url>
     <loc>https://hyperscalar.github.io/zh/papers/</loc>
     
-    <lastmod>2024-11-03</lastmod>
+    <lastmod>2024-11-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hyperscalar.github.io/zh/tags/</loc>
+    <loc>https://hyperscalar.github.io/zh/about/</loc>
     
-    <lastmod>2024-11-03</lastmod>
+    <lastmod>2024-11-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hyperscalar.github.io/zh/books/</loc>
+    
+    <lastmod>2024-11-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hyperscalar.github.io/zh/categories/</loc>
+    
+    <lastmod>2024-11-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hyperscalar.github.io/zh/courses/</loc>
+    
+    <lastmod>2024-11-09</lastmod>
     
   </url>
   
@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://hyperscalar.github.io/zh/</loc>
-    <lastmod>2024-11-03</lastmod>
+    <lastmod>2024-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
