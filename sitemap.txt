@@ -1,8 +1,8 @@
 https://hyperscalar.github.io/zh/papers/
 https://hyperscalar.github.io/zh/tags/
 https://hyperscalar.github.io/zh/about/
-https://hyperscalar.github.io/zh/categories/
 https://hyperscalar.github.io/zh/books/
+https://hyperscalar.github.io/zh/categories/
 https://hyperscalar.github.io/zh/courses/
 https://hyperscalar.github.io/zh/posts/Locality-of-Reference-and-Cache/
 https://hyperscalar.github.io/zh/posts/About-Recursion/
