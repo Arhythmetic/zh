@@ -1,5 +1,5 @@
-https://hyperscalar.github.io/zh/papers/
 https://hyperscalar.github.io/zh/tags/
+https://hyperscalar.github.io/zh/papers/
 https://hyperscalar.github.io/zh/about/
 https://hyperscalar.github.io/zh/books/
 https://hyperscalar.github.io/zh/categories/
